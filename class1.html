@@ -38,7 +38,7 @@
 		<div class="slides">
         <!-- Opening slide -->
             <section>
-                <img src="images/gdi_logo_badge.png" alt="GDI logo">
+                <img class="no-border" src="images/gdi_logo_badge.png" alt="GDI logo">
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 1</h4>
             </section>
@@ -65,21 +65,110 @@
               <ul>
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
-                <li>What is your favorite children's book?</li>
+				<li>What programming languages are you familiar with?</li>
+                <li>What was the first computer you ever used?</li>
               </ul>
               </div>
             </section>
-        
+     
+	 		<section>
+				<h3>What will you need?</h3>
+				<p>You will need a text editor and a browser. </p><img class="full" src="images/browser-text-editor.png"/>
+			</section>
+
+			<section>
+				<h3>And maybe some coffee...</h3>
+				<p>I mean it is JAVAscript!</p>
+				<img class="full" src="images/coffee.png" />
+				<p class="credit">Photo Credit: Josh Sager</p>
+			</section>
+
             <section>
                 <h3>What is JavaScript?</h3>
                 <ul>
-                    <li>JavaScript is standardized by the "ECMAScript" specifications.</li>
-                    <li>JavaScript is a client-side processing language. A browser reads the code and runs it directly.</li>
-                    <li>JavaScript interfaces with HTML and CSS.</li>
-                    <li>With JavaScript, you can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li>
-                    <li>JavaScript lets you build dynamic webpages that respond to input from users.</li>
+					<li class="fragment">JavaScript is a programming language for your browser. It is interrupted instead of compiled.</li>
+					<li class="fragment">It was orginally created by Brendan Eich, Who was born in Pittsburgh!!!</li>
+					<li class="fragment">Each browser has their own implementation of JavaScript, but the ECMAScript specification is what guides JavaScript enhancements in each browser.</li>
+					<li class="fragment">ECMAScript 6 is the latest and greatest, but ECMAScript 5 is considered to be the standard due to it's widespread support.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Ummmm So What does that mean?</h3>
+				<ul>
+					<li class="fragment">JavaScript is and always will be a work in progress.</li>
+					<li class="fragment">Not all browsers support the same Javascript.</li>
+					<li class="fragment">Some browsers throw in extra JavaScript features that arne't apart of the ECMA specification.</li>
+					<li class="fragment">But resources like <a href="http://caniuse.com/#feat=es5">Can I Use ECMAScript 5 Reference</a> and <a href="https://developer.mozilla.org/en-US/">MDN</a> can keep you up to speed.</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<h3>So What is JavaScript Used for?</h3>
+				<ul>
+                    <li class="fragment">JavaScript interfaces with HTML and CSS.</li>
+                    <li class="fragment">JavaScript lets you build dynamic webpages that respond to input from users.</li>
+					<li class="fragment">HTML is the structure.</li>
+					<li class="fragment">CSS is the layout and style.</li>
                 </ul>
             </section>
+
+			<section>
+				<h1 class="title-only">Javascript is the brains!!!</h1>
+			</section>
+
+			<section>
+				<h3>You Will Learn About:</h3>
+				<ul>
+					<li class="fragment">Programming Fundamentals</li>
+					<li class="fragment">Developer Tools</li>
+					<li class="fragment">Variables</li>
+					<li class="fragment">Math Operators</li>
+					<li class="fragment">Strings</li>
+					<li class="fragment">Functions</li>
+					<li class="fragment">Arguments</li>
+					<li class="fragment">Return Values</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Programming Fundamentals</h3>
+				<p>Nearly all programming languages have the same core fundamentals. Which are the following:</p>
+				<ol>
+					<li class="fragment">Execute an instruction</li>
+					<li class="fragment">Accept data, aka input</li>
+					<li class="fragment">Remember things</li>
+					<li class="fragment">Group instructions together</li>
+					<li class="fragment">Control the timing of when the instructions execute</li>
+					<li class="fragment">Output results of executed instruction(s)</li>
+				</ol>
+			</section>
+
+			<section>
+				<h3>Programming Fundamentals</h3>
+				<p class="fragment">If you can master these 6 concepts, then you will have the ability to work with nearly every programming language you come in contact with.</p>
+			</section>
+
+			<section>
+				<h3>And Actually...</h3>
+				<p class="fragment">An added benefit of learning how to write JavaScript is that it's C style syntax is very similar to many other popular languages.</p>
+				<p class="fragment">This is <a href="http://www.tiobe.com/tiobe_index">Tiobe list</a> of the currently most popular programming languages.</p>
+			</section>
+
+			<section>
+				<h3>One more thing...</h3>
+				<p class="fragment">At the time these slides were authored there are only <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">33</a> statements and declarations. Which is the core part of the language. I find that encouraging!</p>
+				<br />
+				<h4 class="fragment">Okay two things...</h4>
+				<p class="fragment">And most everyday development only requires around half of them.</p>
+			</section>
+
+
+			<section>
+				<h1 class="title-only">So How Does it Work?</h1>
+			</section>
+
             <section>
                 <h3>JavaScript is a client-side language</h3>
                 <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
@@ -102,7 +191,7 @@
     &lt;/body&gt;
 &lt;/html&gt;
 				</code></pre>
-            </section>
+				</section>
        
             <section>
                 <h3>Script Tags</h3>
@@ -161,9 +250,9 @@ document.write('Hello World!');
             <section>
                 <h3>Let's Develop It</h3>
                 <ul>
-                    <li>Open index.html. Add a comment to the code.</li>
-                    <li>Try different ways of printing your message.</li>
-                    <li>Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
+                    <li class="fragment">Open index.html. Add a comment to the code.</li>
+                    <li class="fragment">Try different ways of printing your message.</li>
+                    <li class="fragment">Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
                 </ul>
             </section>
        
@@ -174,19 +263,19 @@ document.write('Hello World!');
             <section>
 				<h3>Variable Values</h3>
                 <ul>
-                    <li>When you first create a variable, it does not have a value (it is undefined).</li>
-                    <li>You can set a value for a variable.</li>
-                    <li>Variables can hold different types of information, like words, numbers, and collections of data.</li>
-                    <li>The value of a variable can change over time.</li>
+                    <li class="fragment">When you first create a variable, it does not have a value (it is undefined).</li>
+                    <li class="fragment">You can set a value for a variable.</li>
+                    <li class="fragment">Variables can hold different types of information, like words, numbers, and collections of data.</li>
+                    <li class="fragment">The value of a variable can change over time.</li>
                 </ul>
 			</section>
             <section>
 				<h3>Naming Variables</h3>
                 <ul>
-                    <li>The variable name is case-sensitive.</li>
-                    <li>A new variable needs to have a unique name.</li>
-                    <li>Variable names need to start with a letter, $, or _.</li>
-                    <li>Variable names can only be made of letters, numbers, $, or _.</li>
+                    <li class="fragment">The variable name is case-sensitive.</li>
+                    <li class="fragment">A new variable needs to have a unique name.</li>
+                    <li class="fragment">Variable names need to start with a letter, $, or _.</li>
+                    <li class="fragment">Variable names can only be made of letters, numbers, $, or _.</li>
                 </ul>
 			</section>
             <section>
@@ -222,7 +311,7 @@ document.write('Hello World!');
             
             <section>
 				<h3>Numbers</h3>
-                <p>Variable can be numbers, either integers or floats (decimals).</p>
+                <p>Variables can be numbers, either integers or floats (decimals).</p>
                 <pre><code>
 &lt;script&gt;
     var numberOfKittens = 5;
@@ -418,10 +507,23 @@ document.write('Hello World!');
 			</section>
 			
 			<section>
+				<h3>Summary</h3>
+				<ul>
+					<li class="fragment">Programming Fundamentals</li>
+					<li class="fragment">Developer Tools</li>
+					<li class="fragment">Variables</li>
+					<li class="fragment">Math Operators</li>
+					<li class="fragment">Strings</li>
+					<li class="fragment">Functions</li>
+					<li class="fragment">Arguments</li>
+					<li class="fragment">Return Values</li>
+				</ul>
+			</section>
+			<section>
 				<h3>Resources</h3>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
 

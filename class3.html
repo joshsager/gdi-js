@@ -37,11 +37,67 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
              <section>
-                <img src="images/gdi_logo_badge.png" alt="GDI logo">
+                <img class="no-border" src="images/gdi_logo_badge.png" alt="GDI logo">
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 3</h4>
             </section>
-   
+   	
+			<section>
+				<h3>You Will Learn About:</h3>
+				<ul>
+					<li class="fragment">Object Oriented Programming Introduction</li>
+					<li class="fragment">Objects</li>
+					<li class="fragment">Nesting</li>
+					<li class="fragment">Object Methods</li>
+					<li class="fragment">DOM</li>
+					<li class="fragment">DOM Methods</li>
+					<li class="fragment">DOM Node Styles</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Review</h3>
+				<p>In the previous class we were working with Arrays</p>
+				<pre><code>
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+console.log(rainbowColors.length);
+var rainbowColors.push('Periwinkle');
+console.log(rainbowColors);
+				</pre></code>
+			</section>
+
+			<section>
+				<h3>And Arrays are...</h3>
+				<p class="fragment">Wait for it...</p>
+				<p class="fragment">Wait for it...</p>
+				<p class="fragment">Wait for it...</p>
+				<h4 class="fragment">OBJECTS!!!</h4>
+			</section>
+
+			<section>
+				<h3>Object Oriented Programming Introduction</h3>
+				<ul>
+					<li class="fragment">Objects - <span class="fragment">Fancy name for the thing</span></li>
+					<li class="fragment">Methods - <span class="fragment">Fancy name for a function</span></li>
+					<li class="fragment">Properties - <span class="fragment">Fancy name for a variable</span></li>
+					<li class="fragment">Events - <span class="fragment">Fancy way to delay code execution</span></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Built-In JavaScript Objects</h3>
+				<p>At the time these slides were authored there are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">39</a> built-in JavaScript objects.</p>
+			</section>
+
+			<section>
+				<h3>What does this mean?</h3>
+				<ul>
+					<li class="fragment">The JavaScript language has 39 built-in objects ready for you to use</li>
+					<li class="fragment">Objects are great way group similar behaviors under one common name</li>
+					<li class="fragment">It's very easy to create your own objects</li>
+					<li class="fragment">Objects are at the root of all popular JavaScript frameworks like JQuery, Angular, React, etc.</li>
+				</ul>
+			</section>	
 
             <section>
 			  <h3>Objects</h3>
@@ -174,6 +230,11 @@ lizzieTheCat.eat('brown mushy stuff');
             </section>
 
 			<section>
+				<h3>Putting it all together</h3>
+				<p>Now it's time to take the programming conepts we've leanred, plus the new knowledge we have about objects and apply it to a web page in our browser.</p>
+			</section>
+
+			<section>
 			  <h3>Review: Anatomy of a website</h3>
 			  <div class = "blue"> Your Content</div>
 			  <div><span class = "blue">+ HTML: </span>Structure</div>
@@ -193,11 +254,27 @@ lizzieTheCat.eat('brown mushy stuff');
 				  <p>The "." is how you tell CSS "this is a class name."</p>
 				</div>
 			</section>
-	
+
+			<section>
+				<h1 class="title-only">So how does this relate to JavaScript?</h1>
+			</section>
+
+			<section>
+				<h3>The Document Object Model (DOM)</h3>
+				<ul>
+					<li class="fragment">JavaScript is most commonly used to manipulate the DOM</li>
+					<li class="fragment">The DOM is technically <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">not apart of the JavaScript language</a></li>
+					<li class="fragment">DOM implementations vary from browser to browser</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1 class="title-only">So What is DOM?</h1>
+			</section>
 
             <section>
               <h3>The DOM Tree</h3>
-              <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
+              <p>It's the nested structure of an HTML page as a DOM Tree. The browser makes a "map" of all the elements on a page.</p>
             </section>
             <section>
               <h3>The DOM: Sample Code</h3>
@@ -235,6 +312,17 @@ lizzieTheCat.eat('brown mushy stuff');
                 <li>Use methods to manipulate the node</li>
               </ol>
             </section>
+
+			<section>
+				<h1 class="title-only">Remember, The DOM is Just an Object</h1>
+			</section>
+
+			<section>
+				<h3>The Document Object</h3>
+				<p>As with all objects. They have 3 main parts, methods, properties, and events.</p>
+				<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">full list</a> of all of these related to the document object.</p>
+			</section>
+
             <section>
               <h3>DOM Access: By Id</h3>
               <p>You can find nodes by id using the method:</p>
@@ -252,7 +340,7 @@ var imgKitten = document.getElementById('kittenPic');
             </section>
             <section>
               <h3>DOM Access: By Tag Name</h3>
-              <p>You can certain types of HTML elements using this method:</p>
+              <p>You can use certain types of HTML elements using this method:</p>
               <pre><code>
 document.getElementsByTagName(tagName);
 			  </code></pre>
@@ -415,12 +503,26 @@ pageNode.appendChild(newParagraph);
 				<h3>Let's Develop It</h3>
                 <p>Create a new paragraph element and add it to a div on your page.</p>
 			</section> 
-			
+
+			<section>
+				<h3>Summary:</h3>
+				<ul>
+					<li class="fragment">Object Oriented Programming Introduction</li>
+					<li class="fragment">Objects</li>
+					<li class="fragment">Nesting</li>
+					<li class="fragment">Object Methods</li>
+					<li class="fragment">DOM</li>
+					<li class="fragment">DOM Methods</li>
+					<li class="fragment">DOM Node Styles</li>
+				</ul>
+			</section>
+
+		
 			<section>
 				<h3>Resources</h3>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
  
