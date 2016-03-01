@@ -1,7 +1,7 @@
 #Girl Develop It - Intro to JavaScript
 ===================
 
-This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Richardson.
+This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, Sylvia Richardson, and Cat Farman.
 
 The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
