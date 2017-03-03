@@ -23,7 +23,7 @@
     <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,415 +42,291 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 2</h4>
             </section>
-        
 
-            <section>
-                <h3>Review</h3>
-                <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
-                <pre><code>
-function calculateTip(total) {
-    var tipPercent = 0.15; //Can be changed
-    return (total * tipPercent);
-}
+						<section>
+			        <h3>You Will Learn About:</h3>
+			        <ul>
+			          <li class="fragment">Variables</li>
+			          <li class="fragment">Math Operators</li>
+			          <li class="fragment">Strings</li>
+			          <li class="fragment">Functions</li>
+			          <li class="fragment">Arguments</li>
+			          <li class="fragment">Return Values</li>
+			        </ul>
+			      </section>
 
-var billPreTip = 10;
-var billTip   = calculateTip(billPreTip);
-var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
-    ' Total: ' + (billPreTip + billTip);
-console.log(receipt); 
-				</code></pre>
-            </section>
-   
-   			<section>
-				<h3>You will learn about:</h3>
-				<ul>
-					<li class="fragment">Variable Scope</li>
-					<li class="fragment">Booleans</li>
-					<li class="fragment">Control Flow</li>
-					<li class="fragment">Loops</li>
-					<li class="fragment">Arrays</li>
-					<li class="fragment">Array Manipulation</li>
-				</ul>
-			</section>
+						<section>
+						<h3>Variables</h3>
+								<p>A variable is a place to store values</p>
+						</section>
+						<section>
+						<h3>Variable Values</h3>
+								<ul>
+										<li class="fragment">When you first create a variable, it does not have a value (it is undefined).</li>
+										<li class="fragment">You can set a value for a variable.</li>
+										<li class="fragment">Variables can hold different types of information, like words, numbers, and collections of data.</li>
+										<li class="fragment">The value of a variable can change over time.</li>
+								</ul>
+						</section>
+						<section>
+						<h3>Naming Variables</h3>
+								<ul>
+										<li class="fragment">The variable name is case-sensitive.</li>
+										<li class="fragment">A new variable needs to have a unique name.</li>
+										<li class="fragment">Variable names need to start with a letter, $, or _.</li>
+										<li class="fragment">Variable names can only be made of letters, numbers, $, or _.</li>
+								</ul>
+						</section>
+						<section>
+						<h3>Declaring a Variable</h3>
+								<p>To declare (create) a variable, just type the word "var" and the variable name.</p>
+								<pre><code>
+&lt;script&gt;
+  var numberOfKittens;
+&lt;/script&gt;
 
-            <section>
-                <h3>Variable Scope</h3>
-                <p>The scope of a variable is how long the computer will remember it.</p>
+</code></pre>
+		<p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+		<pre><code>
+&lt;script&gt;
+  var numberOfKittens = 5;
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+						<h3>Using a Variable</h3>
+								<p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
+								<pre><code>
+&lt;script&gt;
+  var numberOfKittens = 5;
+  console.log (numberOfKittens);
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+						<h3>Let's Develop It</h3>
+								<p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p>
+						</section>
 
-                
-            </section>
-            <section>
-                <h3>Global Scope</h3>
-                <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
-                  <pre><code>
-var awesomeGroup = 'Girl Develop It'; //Global scope
-function whatIsAwesome() {
-    console.log (awesomeGroup + ' is pretty awesome.'); //Will work
-}
-whatIsAwesome();
 
-				</code></pre>
-            </section>
-            <section>
-                <h3>Local Scope</h3>            
-                <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
-                <pre><code>
-function whatIsAwesome() {
-    var awesomeGroup = 'Girl Develop It'; //Local scope
-    console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
-}
-whatIsAwesome();
-console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
-				</code></pre>
-            </section>
+						<section>
+						<h3>Numbers</h3>
+								<p>Variables can be numbers, either integers or floats (decimals).</p>
+								<pre><code>
+&lt;script&gt;
+  var numberOfKittens = 5;
+  var cutenessRating = 9.6;
+&lt;/script&gt;
+						</code></pre>
+								<p>The browser will automatically convert integers to floats if needed</p>
+						</section>
 
-            <section>
-                <h3>Boolean Variables</h3>
-                <p>Boolean variables represent the logical values True and False</p>
-                <pre><code>
-var catsAreBest = true;
-var dogsRule = false;
-				</code></pre>                
-                <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
-            </section>
+						<section>
+						<h3>Arithmetic Operators</h3>
+								<p>Once you have numbers, you can do math with them!</p>
+								<pre><code>
+&lt;script&gt;
+  var numberOfKittens = 5;
+  var numberOfPuppies = 4;
+  var numberOfAnimals = numberOfKittens + numberOfPuppies;
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+						<h3>Arithmetic Operators</h3>
+								<table>
+										<thead>
+											<tr>
+											 <th>Example</th>
+											 <th>Name</th>
+											 <th>Result</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+											 <td>-a</td>
+											 <td>Negation</td>
+											 <td>Opposite of a.</td>
+											</tr>
+											<tr>
+											 <td>a + b</td>
+											 <td>Addition</td>
+											 <td>Sum of a and b.</td>
+											</tr>
+											<tr>
+											 <td>a - b</td>
+											 <td>Subtraction</td>
+											 <td>Difference of a and b.</td>
+											</tr>
+											<tr>
+											 <td>a * b</td>
+											 <td>Multiplication</td>
+											 <td>Product of a and b.</td>
+											</tr>
+											<tr>
+											 <td>a / b</td>
+											 <td>Division</td>
+											 <td>Quotient of a and b.</td>
+											</tr>
+											<tr>
+											 <td>a % b</td>
+											 <td>Modulus</td>
+											 <td>Remainder of a divided by b.</td>
+											</tr>
+										</tbody>
+								</table>
+						</section>
+						<section>
+						<h3>Let's Develop It</h3>
+								<p>Create two variables and try some arithmetic operators. Don't forget to display your results!</p>
+						</section>
 
-            <section>
-                <h3>The if statement</h3>
-                <p>Use if to decide which lines of code to execute, based on a condition.</p>
-                <pre><code>
-if (condition) {
-  // statements to execute
-}
-				</code></pre>
-                <pre><code>
-var bananas = 5;
-if (bananas &gt; 0) {
-  console.log ('You have some bananas!');
-}
-				</code></pre>
-            </section>
-            <section>
-				<h3>Comparison Operators</h3>
-                <table class="smalltext">
-                    <thead>
-                      <tr>
-                        <th width="150px">Example</th>
-                        <th width="250px">Name</th>
-                        <th>Result</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                       <td>a == b</td>
-                       <td>Equal</td>
-                       <td><strong><code>TRUE</code></strong> if a is equal to b (can be different types).</td>
-                      </tr>
-                      <tr>
-                       <td>a === b</td>
-                       <td>Identical</td>
-                       <td>
-                        <strong><code>TRUE</code></strong> if a is equal to b, and the same type. </td>
-                      </tr>
-                      <tr>
-                       <td>a != b</td>
-                       <td>Not equal</td>
-                       <td><strong><code>TRUE</code></strong> if a is not equal to b (can be different types).</td>
-                      </tr>
-                      <tr>
-                       <td>a !== b</td>
-                       <td>Not identical</td>
-                       <td>
-                        <strong><code>TRUE</code></strong> if a is not equal to b, or they are not the same type.</td>
-                      </tr>
-                      <tr>
-                       <td>a &lt; b</td>
-                       <td>Less than</td>
-                       <td><strong><code>TRUE</code></strong> if a is strictly less than b.</td>
-                      </tr>
-                      <tr>
-                       <td>a &gt; b</td>
-                       <td>Greater than</td>
-                       <td><strong><code>TRUE</code></strong> if a is strictly greater than b.</td>
-                      </tr>
-                      <tr>
-                       <td>a &lt;= b</td>
-                       <td>Less than or equal to </td>
-                       <td><strong><code>TRUE</code></strong> if a is less than or equal to b.</td>
-                      </tr>
-                      <tr>
-                       <td>a &gt;= b</td>
-                       <td>Greater than or equal to </td>
-                       <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
-                      </tr>
-                    </tbody>    
-                </table>          
-			</section>
-            <section>
-                <h3>Watch out!</h3>
-                <p>Don't mix up = and ==</p>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p> 
-			</section>
+						<section>
+								<h3>Strings</h3>
+								<p>Variables can be strings, groups of characters. You put your string in quotes.</p>
+								<pre><code>
+&lt;script&gt;
+  var kittensName = 'Fluffy';
+&lt;/script&gt;
+						</code></pre>
+								<p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
+								<pre><code>
+&lt;script&gt;
+  console.log('I\'d like to use an apostrophe');
+&lt;/script&gt;
+						</code></pre>
+						</section>
 
-			<section>
-				<h3>Control Flow</h3>
-				<p>Now that we have learned how to write instructions, interact with data, remember that data, output that data, and group all of those instructions together, it's now time to modify when those instructions execute. This is known as <strong>control flow</strong></p>
-				<img src="images/control-flow.png" />
-				<p class="credit">Image Credit: Google via Wikipedia</p>
-			</section>
+						<section>
+								<h3>String Operators</h3>
+								<p>You can put strings together with a +, the concatenation operator.</p>
+								<pre><code>
+&lt;script&gt;
+  var kittensName = 'Fluffy ';
+  var fullName = kittensName + ' McDougle';
+  console.log(fullName); //Outputs 'Fluffy McDougle'
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+								<h3>String Operators</h3>
+								<p>You can also use += to add things to the end of a string.</p>
+								<pre><code>
+&lt;script&gt;
+  var kittensName = 'Admiral ';
+  kittensName += ' Snuggles';
+  console.log(kittensName); //Outputs 'Admiral Snuggles'
+&lt;/script&gt;
+						</code></pre>
+						</section>
 
-			<section>
-				<h1>Breakpoint Example</h1>
-				<a href="breakpoint.html">Breakpoint Example</a>
-				<p class="credit">Image credit: Josh Sager</p>
-			</section>
+						<section>
+						<h3>Let's Develop It</h3>
+								<p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to display your results!</p>
+						</section>
 
-            <section>
-                <h3>The if/else statement</h3>
-                <p>Use else to provide an alternate set of instructions.</p>
-                <pre><code>
-var age = 28;
-if (age &gt;= 16) {
-    console.log ('Yay, you can drive!');
-} else {
-    console.log ('Sorry, but you have ' + (16 - age) + 
-    ' years until you can drive.');
-}
-				</code></pre>
-            </section>
-            <section>
-                <h3>The if/else if/else statement</h3>
-                <p>If you have multiple conditions, you can use else if.</p>
-                <pre><code>
-var age = 20;
-if (age &gt;= 35) {
-    console.log('You can vote AND hold any place in government!');
-} else if (age &gt;= 25) {
-    console.log('You can vote AND run for the Senate!');
-} else if (age &gt;= 18) {
-    console.log('You can vote!');
-} else {
-    console.log('You can\'t vote, but you can 
-    still write your representatives.');
-}
-				</code></pre>
-            </section>
-             <section>
-				<h3>Let's Develop It</h3>
-                <p>Modify your "wear a coat" code for these conditions:</p>
-                <ol>
-                    <li>If it is less than 50 degrees, wear a coat.</li>
-                    <li>If it is less than 30 degrees, wear a coat and a hat.</li>
-                    <li>If it is less than 0 degrees, stay inside.</li>
-                    <li>Otherwise, wear whatever you want.</li>
-                </ol>
-			</section>
-            <section>
-				<h3>Logical Operators</h3>
-                <table>
-                    <thead>
-                      <tr>
-                        <th width="200px">Example</th>
-                        <th width="150px">Name</th>
-                        <th>Result</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                       <td>a &amp;&amp; b</td>
-                       <td>And</td>
-                       <td><strong><code>TRUE</code></strong> if both a and b are <strong><code>TRUE</code></strong>.</td>
-                      </tr>
-                      <tr>
-                      <td>a || b</td>
-                       <td>Or</td>
-                       <td><strong><code>TRUE</code></strong> if either a or b is <strong><code>TRUE</code></strong>.</td>
-                      </tr>
-                      <tr>
-                       <td>! a</td>
-                       <td>Not</td>
-                       <td><strong><code>TRUE</code></strong> if a is not <strong><code>TRUE</code></strong>.</td>
-                      </tr>
-                     </tbody>    
-                </table>          
-			</section>
-            <section>
-                <h3>Using logical operators</h3>
-                <p>You can use these operators to combine conditions.</p>
-                <pre><code>
-var bananas = 5;
-if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
-    console.log ('You have a reasonable number of bananas');
-} else {
-    console.log ('Check your banana supply');
-}
-				</code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Add a logical operator to your what to wear program.</p> 
-			</section>
+						<section>
+								<h3>Functions</h3>
+								<p>Functions are separable, reusable pieces of code.
 
-            <section>
-                <h3>While loops</h3>
-                <p>While will repeat the same code over and over until some condition is met.</p>
-                <pre><code>
-var bottlesOfBeer = 99;
-while (bottlesOfBeer &gt;= 1) {
-    console.log (bottlesOfBeer + ' bottles of beer on the wall');
-    bottlesOfBeer = bottlesOfBeer - 9;
-}
-				</code></pre>
-            </section>
-            <section>
-				<h3>Infinite Loops</h3>
-                <p>Make sure something changes in the loop, or your loop will go on forever...</p>
-			</section>
-            <section>
-                <h3>For loops</h3>
-                <p>For loops are very similar, but you declare a counter in the statement.</p>
-                <pre><code>
-//will count 1 to 10
-for (var i = 1; i &lt;= 10; i++) {
-    console.log (i); 
-}
-				</code></pre>
-            </section>
-            <section>
-                <h3>Loops and logic</h3>
-                <p>You can add other statements or logical operators inside the loops.</p>
-                <pre><code>
-//Count from 1 to 50
-for (var i = 1; i &lt;= 50; i++) {
-    console.log (i);       
-    //Says 'Buzz' after multiples of three
-    if (i % 3 == 0) {
-        console.log (' Buzz');
-    }        
-    //Says 'Bang' after multiples of five
-    if (i % 5 == 0) {
-        console.log (' Bang');
-    }
-}
-				</code></pre>
-            </section>
-            <section>
-                <h3>Break</h3>
-                <p>To exit a loop, use the break statement.</p>
-                <pre><code>
-//Count from 100 to 200              
-for (var i = 100; i &lt;= 200; i++) {
-    console.log('Testing ' + i);
-    //Stop at the first multiple of 7
-    if (i % 7 == 0) {
-        console.log('Found it! ' + i);
-        break;
-    }
-}
-				</code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
-                <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
-			</section>
+						</section>
+						<section>
+								<h3>Using Functions</h3>
+								<p>First, declare the function.</p>
+								<pre><code>
+&lt;script&gt;
+  function turtleFact() {
+    console.log('A turtle\'s lower shell is called a plastron.');
+  }
+&lt;/script&gt;
+						</code></pre>
+								<p>Then, use it as many times as you want!</p>
+								<pre><code>
+&lt;script&gt;
+  turtleFact();
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+								<h3>Arguments</h3>
+								<p>Functions can accept input values, called arguments.</p>
+								<pre><code>
+&lt;script&gt;
+  function callKitten (kittenName){
+    console.log('Come here, ' + kittenName + '!');
+  }
+  callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
 
-            <section>
-                <h3>Arrays</h3>
-                <p>Arrays are ordered lists of values.</p>
-                <pre><code>
-var arrayName = [element0, element1, ...];
-				</code></pre>
-                <p>You can put different types of data into an array.</p>
-                <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
-'Blue', 'Indigo', 'Violet'];
-var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-				</code></pre>
-            </section>
-            <section>
-                <h3>Array Length</h3>
-                <p>The length property tells you how many things are in an array</p>
-                <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
-'Blue', 'Indigo', 'Violet'];
-console.log(rainbowColors.length);
-				</code></pre>                
-            </section>
-            <section>
-                <h3>Using Arrays</h3>
-                <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
-                <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
-'Blue', 'Indigo', 'Violet'];
-var firstColor = rainbowColors[0];
-var lastColor = rainbowColors[6];
-				</code></pre>                
-            </section>
-            <section>
-                <h3>Changing arrays</h3>
-                <p>You can use bracket notation to change an item in an array</p>
-                <pre><code>
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings[0] = 'Asparagus';            
-                </code></pre>
-            </section>
-            <section>
-                <h3>Expanding arrays</h3>
-                <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
-                <pre><code>
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings.push('Dancing');              
-                </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create an array of your favorite foods. Echo a few values onto your screen.</p> 
-			</section>
+  function addNumbers(a, b) {
+    console.log(a + b);
+  }
+  addNumbers(5,7); //outputs 12
+  addNumbers(9,12); //outputs 21
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+								<h3>Arguments</h3>
+								<p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
+								<pre><code>
+&lt;script&gt;
+  function addOne(inputNumber){
+    var newNumber = inputNumber + 1;
+    console.log('&lt;p&gt;You now have ' + newNumber);
+  }
+  //Declare variables
+  var numberOfKittens = 5;
+  var numberOfPuppies = 4;
+  //Use them in functions
+  addOne(numberOfKittens);
+  addOne(numberOfPuppies);
+&lt;/script&gt;
+						</code></pre>
+						</section>
+						<section>
+						<h3>Let's Develop It</h3>
+								<p>Turn the code you wrote to output someone's full name into a function, then use it.</p>
+						</section>
+						<section>
+								<h3>Returning Values</h3>
+								<p>You can have a function give you back a value, to use later.</p>
+								<pre><code>
+&lt;script&gt;
+  function square(num) {
+    return num * num;
+  }
+  console.log(square(4));   // outputs '16'.
+  var squareOfFive = square(5); // will make squareOfFive equal 25.
+&lt;/script&gt;
+						</code></pre>
+								<p>Return will immediately end a function.</p>
+						</section>
 
-            <section>
-                <h3>Iterating through arrays</h3>
-                <p>Use a for loop to easily process each item in an array.</p>
-                <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-for (var i = 0; i &lt; rainbowColors.length; i++) {
-  console.log(rainbowColors[i]);
-}              
-                </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Use a loop to make a list of all your favorite foods.</p> 
-			</section>            
+						<section>
+						<h3>Let's Develop It</h3>
+								<p>Add a return statement to your name function. Use that function to set the value of a variable.</p>
+						</section>
 
-			<section>
-				<h3>Summary</h3>
-				<ul>
-					<li class="fragment">Variable Scope</li>
-					<li class="fragment">Booleans</li>
-					<li class="fragment">Control Flow</li>
-					<li class="fragment">Loops</li>
-					<li class="fragment">Arrays</li>
-					<li class="fragment">Array Manipulation</li>
-				</ul>
-			</section>
+						<section>
+							<h3>Summary</h3>
+							<ul>
+								<li class="fragment">Variables</li>
+								<li class="fragment">Math Operators</li>
+								<li class="fragment">Strings</li>
+								<li class="fragment">Functions</li>
+								<li class="fragment">Arguments</li>
+								<li class="fragment">Return Values</li>
+							</ul>
+						</section>
 
-		  	<section>
-				<h3>Survey</h3>
-				<p>GDI Intro to JavaScript Class Survey <a href="http://goo.gl/forms/8s5lBq4Bqe">Survey Link</a></p>
-			</section>
+						<section>
+							<h3>Resources</h3>
+								<ul>
+									<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+									<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
+								</ul>
+						</section>
 
-			<section>
-				<h3>Resources</h3>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
-					</ul>
-			</section>
-		 
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">

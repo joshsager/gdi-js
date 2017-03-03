@@ -23,7 +23,7 @@
     <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -41,11 +41,13 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 3</h4>
             </section>
-   	
+
+
+
 			<section>
 				<h3>You Will Learn About:</h3>
 				<ul>
-					<li class="fragment">Object Oriented Programming Introduction</li>
+					<li class="fragment">Object Oriented Programming Re-Introduction</li>
 					<li class="fragment">Objects</li>
 					<li class="fragment">Nesting</li>
 					<li class="fragment">Object Methods</li>
@@ -53,6 +55,23 @@
 					<li class="fragment">DOM Methods</li>
 					<li class="fragment">DOM Node Styles</li>
 				</ul>
+			</section>
+
+			<section>
+					<h3>Review</h3>
+					<p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
+					<pre><code>
+function calculateTip(total) {
+var tipPercent = 0.15; //Can be changed
+return (total * tipPercent);
+}
+
+var billPreTip = 10;
+var billTip   = calculateTip(billPreTip);
+var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
+' Total: ' + (billPreTip + billTip);
+console.log(receipt);
+			</code></pre>
 			</section>
 
 			<section>
@@ -75,7 +94,7 @@ console.log(rainbowColors);
 			</section>
 
 			<section>
-				<h3>Object Oriented Programming Introduction</h3>
+				<h3>Object Oriented Programming Re-Introduction</h3>
 				<ul>
 					<li class="fragment">Objects - <span class="fragment">Fancy name for the thing</span></li>
 					<li class="fragment">Methods - <span class="fragment">Fancy name for a function</span></li>
@@ -86,24 +105,24 @@ console.log(rainbowColors);
 
 			<section>
 				<h3>Built-In JavaScript Objects</h3>
-				<p>At the time these slides were authored there are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">39</a> built-in JavaScript objects.</p>
+				<p>At the time these slides were authored there are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">18</a> fundamental built-in JavaScript objects.</p>
 			</section>
 
 			<section>
 				<h3>What does this mean?</h3>
 				<ul>
-					<li class="fragment">The JavaScript language has 39 built-in objects ready for you to use</li>
+					<li class="fragment">The JavaScript language has 18 built-in objects ready for you to use</li>
 					<li class="fragment">Objects are a great way to group similar behaviors under one common name</li>
 					<li class="fragment">It's very easy to create your own objects</li>
 					<li class="fragment">Objects are at the root of all popular JavaScript frameworks like JQuery, Angular, React, etc.</li>
 				</ul>
-			</section>	
+			</section>
 
             <section>
 			  <h3>Objects</h3>
 			  <p>Objects let us store a collection of properties.</p>
               <pre><code>
-var objectName = { 
+var objectName = {
   propertyName: propertyValue,
   propertyName: propertyValue,
   ...
@@ -115,7 +134,7 @@ var aboutMe = {
   hair: 'Auburn',
   likes: ['knitting', 'code'],
   birthday: {month: 10, day: 17}
-}; 
+};
 			  </code></pre>
 			</section>
             <section>
@@ -125,7 +144,7 @@ var aboutMe = {
 var aboutMe = {
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
-}; 
+};
 var myHometown = aboutMe.hometown;
 			  </code></pre>
               <p>Or using "bracket notation" (like arrays)</p>
@@ -140,7 +159,7 @@ var myHair = aboutMe['hair'];
 var aboutMe = {
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
-}; 
+};
 aboutMe.hair = 'blue';
 			  </code></pre>
               <p>Add new properties</p>
@@ -157,7 +176,7 @@ delete aboutMe.pet;
 			  <p>Since arrays can hold any data type, they can also hold objects</p>
               <pre><code>
 var myCats = [
-  {name: 'Lizzie', 
+  {name: 'Lizzie',
    age: 18},
   {name: 'Daemon',
    age: 1}
@@ -192,7 +211,7 @@ describeCat(lizzieTheCat);
                 <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
                 <p>Try displaying some information about your recipe.</p>
                 <p>Bonus: Create a loop to list all the ingredients.</p>
-			</section> 
+			</section>
 
             <section>
               <h3>Object methods</h3>
@@ -205,7 +224,7 @@ var lizzieTheCat = {
     console.log('meowww');
   },
   eat: function(food) {
-    console.log('Yum, I love ' + food);  
+    console.log('Yum, I love ' + food);
   }
 };
 			  </code></pre>
@@ -214,7 +233,7 @@ var lizzieTheCat = {
 lizzieTheCat.meow();
 lizzieTheCat.eat('brown mushy stuff');
 			  </code></pre>
-            </section>            
+            </section>
             <section>
               <h3>Built-in methods</h3>
               <p>JS provides several built-in objects:</p>
@@ -229,99 +248,20 @@ lizzieTheCat.eat('brown mushy stuff');
               </ul>
             </section>
 
-			<section>
-				<h3>Putting it all together</h3>
-				<p>Now it's time to take the programming conepts we've learned, plus the new knowledge we have about objects and apply it to a web page in our browser.</p>
-			</section>
+						<section>
+							<h3>The Document Object</h3>
+							<p>As with all objects. They have 3 main parts, methods, properties, and events.</p>
+							<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">full list</a> of all of these related to the document object.</p>
+						</section>
 
-			<section>
-			  <h3>Review: Anatomy of a website</h3>
-			  <div class = "blue"> Your Content</div>
-			  <div><span class = "blue">+ HTML: </span>Structure</div>
-			  <div><span class = "blue">+ CSS: </span>Presentation</div>
-			  <div class = "blue">= Your Website</div>
-			  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
-			</section>
-
-            <section>
-			<h3>IDs vs. Classes</h3>
-				<div class = "left-align">
-				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
-				  <p>The "#" is how you tell CSS "this is an id."</p>
-				</div>
-				<div class = "left-align">
-				  <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
-				  <p>The "." is how you tell CSS "this is a class name."</p>
-				</div>
-			</section>
-
-			<section>
-				<h1 class="title-only">So how does this relate to JavaScript?</h1>
-			</section>
-
-			<section>
-				<h3>The Document Object Model (DOM)</h3>
-				<ul>
-					<li class="fragment">JavaScript is most commonly used to manipulate the DOM</li>
-					<li class="fragment">The DOM is technically <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">not a part of the JavaScript language</a></li>
-					<li class="fragment">DOM implementations vary from browser to browser</li>
-				</ul>
-			</section>
-
-			<section>
-				<h1 class="title-only">So What is DOM?</h1>
-			</section>
-
-            <section>
-              <h3>The DOM Tree</h3>
-              <p>It's the nested structure of an HTML page as a DOM Tree. The browser makes a "map" of all the elements on a page.</p>
-            </section>
-            <section>
-              <h3>The DOM: Sample Code</h3>
-                <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Test Page&lt;/title&gt;
-        &lt;style&gt;
-            h1 {
-             color: red;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;My Page&lt;/h1&gt;
-        &lt;p&gt;Hello World!&lt;/p&gt;
-        &lt;img src="http://placebear.com/200/300" alt="bear"/&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-				</code></pre>
-            </section>
-            <section>
-              <h3>The DOM: Sample Model</h3>
-              <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
-            </section>
-          
-        <!--Accessing the DOM-->
-  
-            <section>
-              <h3>DOM Access</h3>
-              <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
-              <ol>
-                <li>Find the DOM node and store it in a variable</li>
-                <li>Use methods to manipulate the node</li>
-              </ol>
-            </section>
-
-			<section>
-				<h1 class="title-only">Remember, The DOM is Just an Object</h1>
-			</section>
-
-			<section>
-				<h3>The Document Object</h3>
-				<p>As with all objects. They have 3 main parts, methods, properties, and events.</p>
-				<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">full list</a> of all of these related to the document object.</p>
-			</section>
+			      <section>
+			        <h3>DOM Access</h3>
+			        <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
+			        <ol>
+			          <li>Find the DOM node and store it in a variable</li>
+			          <li>Use methods to manipulate the node</li>
+			        </ol>
+			      </section>
 
             <section>
               <h3>DOM Access: By Id</h3>
@@ -338,6 +278,7 @@ document.getElementById(id);
 var imgBear = document.getElementById('bearPic');
 			  </code></pre>
             </section>
+
             <section>
               <h3>DOM Access: By Tag Name</h3>
               <p>You can use certain types of HTML elements using this method:</p>
@@ -355,31 +296,6 @@ var listItems = document.getElementsByTagName('li');
 for (var i =0; i &lt; listItems.length; i++) {
   var listItem = listItems[i];
 }
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM Access: HTML 5</h3>
-              <p>In newer browsers, you can use other methods too.</p>
-              <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
-              <pre><code>
-document.getElementsByClassName(className);
-			  </code></pre>
-              <p>Available in <a href="http://caniuse.com/#search=querySelectorAll">IE8+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
-              <pre><code>
-document.querySelector(cssQuery);
-document.querySelectorAll(cssQuery);
-			  </code></pre>
-            </section>
-            <section>
-              <h3>getElement vs. getElements</h3>
-              <p>Any method that starts with "getElement" will return a <span class = "blue">single</span> node.</p>
-              <pre><code>
-document.getElementById('uniqueID'); //returns a single node
-			  </code></pre>
-              <p>Any method that starts with "getElements" will return a <span class = "blue">array</span> of nodes. To modify a single node, you will need to use bracket notation to select the correct one.</p>
-              <pre><code>
-document.getElementsByTagName('p'); //returns multiple nodes
-var specficParagraph = document.getElementsByTagName('p')[2];
 			  </code></pre>
             </section>
 
@@ -445,8 +361,8 @@ pageNode.style.paddingTop = '10px';
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
-                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p> 
-			</section>       
+                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+			</section>
 
             <section>
               <h3>DOM innerHTML</h3>
@@ -502,12 +418,12 @@ pageNode.appendChild(newParagraph);
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Create a new paragraph element and add it to a div on your page.</p>
-			</section> 
+			</section>
 
 			<section>
 				<h3>Summary:</h3>
 				<ul>
-					<li class="fragment">Object Oriented Programming Introduction</li>
+					<li class="fragment">Object Oriented Programming Re-Introduction</li>
 					<li class="fragment">Objects</li>
 					<li class="fragment">Nesting</li>
 					<li class="fragment">Object Methods</li>
@@ -517,7 +433,7 @@ pageNode.appendChild(newParagraph);
 				</ul>
 			</section>
 
-		
+
 			<section>
 				<h3>Resources</h3>
 					<ul>
@@ -525,7 +441,7 @@ pageNode.appendChild(newParagraph);
 						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
- 
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">

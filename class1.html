@@ -23,7 +23,7 @@
         <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,12 +42,12 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 1</h4>
             </section>
-          
+
 		  	<section>
 				<h3>Survey</h3>
 				<p>GDI Intro to JavaScript Class Survey <a href="http://goo.gl/forms/8s5lBq4Bqe">Survey Link</a></p>
 			</section>
-        
+
             <section>
               <h3>Welcome!</h3>
               <div class = "left-align">
@@ -61,7 +61,7 @@
               </ul>
               </div>
             </section>
-           
+
             <section>
               <h3>Welcome!</h3>
               <div class = "left-align">
@@ -74,7 +74,7 @@
               </ul>
               </div>
             </section>
-     
+
 	 		<section>
 				<h3>What will you need?</h3>
 				<p>You will need a text editor and a browser. </p><img class="full" src="images/browser-text-editor.png"/>
@@ -120,16 +120,12 @@
 			<section>
 				<h3>So What is JavaScript Used for?</h3>
 				<ul>
-                    <li class="fragment">JavaScript interfaces with HTML and CSS.</li>
-                    <li class="fragment">JavaScript lets you build dynamic webpages that respond to input from users.</li>
+          <li class="fragment">JavaScript interfaces with HTML and CSS.</li>
+          <li class="fragment">JavaScript lets you build dynamic webpages that respond to input from users.</li>
 					<li class="fragment">HTML is the structure.</li>
 					<li class="fragment">CSS is the layout and style.</li>
-                </ul>
-            </section>
-
-			<section>
-				<h1 class="title-only">Javascript is the brains!!!</h1>
-			</section>
+        </ul>
+      </section>
 
 			<section>
 				<h1>Breakout</h1>
@@ -138,16 +134,20 @@
 			</section>
 
 			<section>
+				<h1 class="title-only">Javascript is the brains!!!</h1>
+			</section>
+
+
+
+			<section>
 				<h3>You Will Learn About:</h3>
 				<ul>
 					<li class="fragment">Programming Fundamentals</li>
+					<li class="fragment">Our First Program</li>
+					<li class="fragment">JavaScript Files</li>
 					<li class="fragment">Developer Tools</li>
-					<li class="fragment">Variables</li>
-					<li class="fragment">Math Operators</li>
-					<li class="fragment">Strings</li>
-					<li class="fragment">Functions</li>
-					<li class="fragment">Arguments</li>
-					<li class="fragment">Return Values</li>
+					<li class="fragment">The DOM</li>
+					<li class="fragment">DOM Modification</li>
 				</ul>
 			</section>
 
@@ -210,7 +210,7 @@
 &lt;/html&gt;
 				</code></pre>
 				</section>
-       
+
             <section>
                 <h3>Script Tags</h3>
                 <p>You can mix JavaScript and HTML. The script tag tells your browser the stuff inside is code, not content.</p>
@@ -250,13 +250,14 @@
                 <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
                 <pre><code>
 &lt;script&gt;
-    /*I can wrap long comments 
-    with multiple lines 
+    /*I can wrap long comments
+    with multiple lines
     like this*/
     console.log('Hello World!'); //Or mark short comments like this
 &lt;/script&gt;
 				</code></pre>
             </section>
+
             <section>
                 <h3>Getting results onto your screen</h3>
                 <p>Open a popup box.</p>
@@ -272,6 +273,7 @@ console.log('Hello World!');
 document.write('Hello World!');
 				</code></pre>
             </section>
+
             <section>
                 <h3>Let's Develop It</h3>
                 <ul>
@@ -280,279 +282,188 @@ document.write('Hello World!');
                     <li class="fragment">Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
                 </ul>
             </section>
-       
-            <section>
-				<h3>Variables</h3>
-                <p>A variable is a place to store values</p>			
-			</section>
-            <section>
-				<h3>Variable Values</h3>
-                <ul>
-                    <li class="fragment">When you first create a variable, it does not have a value (it is undefined).</li>
-                    <li class="fragment">You can set a value for a variable.</li>
-                    <li class="fragment">Variables can hold different types of information, like words, numbers, and collections of data.</li>
-                    <li class="fragment">The value of a variable can change over time.</li>
-                </ul>
-			</section>
-            <section>
-				<h3>Naming Variables</h3>
-                <ul>
-                    <li class="fragment">The variable name is case-sensitive.</li>
-                    <li class="fragment">A new variable needs to have a unique name.</li>
-                    <li class="fragment">Variable names need to start with a letter, $, or _.</li>
-                    <li class="fragment">Variable names can only be made of letters, numbers, $, or _.</li>
-                </ul>
-			</section>
-            <section>
-				<h3>Declaring a Variable</h3>
-                <p>To declare (create) a variable, just type the word "var" and the variable name.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens;
-&lt;/script&gt;
-				</code></pre>
-                <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-&lt;/script&gt;
-				</code></pre> 
-			</section>
-            <section>
-				<h3>Using a Variable</h3>
-                <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-    console.log (numberOfKittens);
-&lt;/script&gt;
-				</code></pre>
-			</section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p> 
-			</section>
-       
-            
-            <section>
-				<h3>Numbers</h3>
-                <p>Variables can be numbers, either integers or floats (decimals).</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-    var cutenessRating = 9.6;
-&lt;/script&gt;
-				</code></pre>
-                <p>The browser will automatically convert integers to floats if needed</p>
-			</section>
-            
-            <section>
-				<h3>Arithmetic Operators</h3>
-                <p>Once you have numbers, you can do math with them!</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-    var numberOfPuppies = 4;
-    var numberOfAnimals = numberOfKittens + numberOfPuppies;
-&lt;/script&gt;
-				</code></pre>
-			</section>
-            <section>
-				<h3>Arithmetic Operators</h3>
-                <table>                
-                    <thead>
-                      <tr>
-                       <th>Example</th>
-                       <th>Name</th>
-                       <th>Result</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                       <td>-a</td>
-                       <td>Negation</td>
-                       <td>Opposite of a.</td>
-                      </tr>
-                      <tr>
-                       <td>a + b</td>
-                       <td>Addition</td>
-                       <td>Sum of a and b.</td>
-                      </tr>
-                      <tr>
-                       <td>a - b</td>
-                       <td>Subtraction</td>
-                       <td>Difference of a and b.</td>
-                      </tr>
-                      <tr>
-                       <td>a * b</td>
-                       <td>Multiplication</td>
-                       <td>Product of a and b.</td>
-                      </tr>
-                      <tr>
-                       <td>a / b</td>
-                       <td>Division</td>
-                       <td>Quotient of a and b.</td>
-                      </tr>
-                      <tr>
-                       <td>a % b</td>
-                       <td>Modulus</td>
-                       <td>Remainder of a divided by b.</td>
-                      </tr>
-                    </tbody>                
-                </table>
-			</section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create two variables and try some arithmetic operators. Don't forget to display your results!</p> 
-			</section>
-      
-            <section>
-                <h3>Strings</h3>
-                <p>Variables can be strings, groups of characters. You put your string in quotes.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Fluffy';
-&lt;/script&gt;
-				</code></pre>
-                <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
-                <pre><code>
-&lt;script&gt;
-    console.log('I\'d like to use an apostrophe');
-&lt;/script&gt;
-				</code></pre>                
-            </section>
 
-            <section>
-                <h3>String Operators</h3>
-                <p>You can put strings together with a +, the concatenation operator.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Fluffy ';
-    var fullName = kittensName + ' McDougle';
-    console.log(fullName); //Outputs 'Fluffy McDougle'
-&lt;/script&gt;
-				</code></pre>
-            </section>
-            <section>
-                <h3>String Operators</h3>
-                <p>You can also use += to add things to the end of a string.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Admiral ';
-    kittensName += ' Snuggles';
-    console.log(kittensName); //Outputs 'Admiral Snuggles'
-&lt;/script&gt;
-				</code></pre>
-            </section>
+						<section>
+								<h3>Starting with the Deep End of the Pool</h3>
+								<p>When people talk about javascript. Usually they are talking about 2 things.</p>
+								<ul>
+									<li class="fragment">The DOM</li>
+									<li class="fragment">The Programming Language</li>
+								</ul>
+						</section>
 
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to display your results!</p> 
-			</section>
+						<section>
+						  <h3>The Document Object Model (DOM)</h3>
+						  <ul>
+						    <li class="fragment">JavaScript is most commonly used to manipulate the DOM</li>
+						    <li class="fragment">The DOM is technically <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">not a part of the JavaScript language</a></li>
+						    <li class="fragment">DOM implementations vary from browser to browser</li>
+						  </ul>
+						</section>
 
-            <section>
-                <h3>Functions</h3>
-                <p>Functions are separable, reusable pieces of code. 
-    
-            </section>
-            <section>
-                <h3>Using Functions</h3>
-                <p>First, declare the function.</p>
-                <pre><code>
-&lt;script&gt;
-    function turtleFact() {
-        console.log('A turtle\'s lower shell is called a plastron.');
-    }
-&lt;/script&gt;
-				</code></pre>
-                <p>Then, use it as many times as you want!</p>
-                <pre><code>
-&lt;script&gt;
-    turtleFact();
-&lt;/script&gt;
-				</code></pre>                
-            </section>
-            <section>
-                <h3>Arguments</h3>
-                <p>Functions can accept input values, called arguments.</p>
-                <pre><code>
-&lt;script&gt;
-    function callKitten (kittenName){
-        console.log('Come here, ' + kittenName + '!');
-    }
-    callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
-    
-    function addNumbers(a, b) {
-        console.log(a + b);
-    }
-    addNumbers(5,7); //outputs 12
-    addNumbers(9,12); //outputs 21
-&lt;/script&gt;
-				</code></pre>             
-            </section>
-            <section>
-                <h3>Arguments</h3>
-                <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-                <pre><code>
-&lt;script&gt;
-    function addOne(inputNumber){
-        var newNumber = inputNumber + 1;
-        console.log('&lt;p&gt;You now have ' + newNumber);
-    }
-    //Declare variables
-    var numberOfKittens = 5;
-    var numberOfPuppies = 4;
-    //Use them in functions
-    addOne(numberOfKittens);
-    addOne(numberOfPuppies);    
-&lt;/script&gt;
-				</code></pre>             
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Turn the code you wrote to output someone's full name into a function, then use it.</p> 
-			</section>
-            <section>
-                <h3>Returning Values</h3>
-                <p>You can have a function give you back a value, to use later.</p>
-                <pre><code>
-&lt;script&gt;
-    function square(num) {
-        return num * num;
-    }
-    console.log(square(4));   // outputs '16'.
-    var squareOfFive = square(5); // will make squareOfFive equal 25.
-&lt;/script&gt;
-				</code></pre>
-                <p>Return will immediately end a function.</p>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Add a return statement to your name function. Use that function to set the value of a variable.</p> 
-			</section>
-			
-			<section>
-				<h3>Summary</h3>
-				<ul>
-					<li class="fragment">Programming Fundamentals</li>
-					<li class="fragment">Developer Tools</li>
-					<li class="fragment">Variables</li>
-					<li class="fragment">Math Operators</li>
-					<li class="fragment">Strings</li>
-					<li class="fragment">Functions</li>
-					<li class="fragment">Arguments</li>
-					<li class="fragment">Return Values</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Resources</h3>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
-					</ul>
-			</section>
+						<section>
+						  <h1 class="title-only">So What is DOM?</h1>
+						</section>
 
- 
+						      <section>
+						        <h3>The DOM Tree</h3>
+						        <p>It's the nested structure of an HTML page as a DOM Tree. The browser makes a "map" of all the elements on a page.</p>
+						      </section>
+						      <section>
+						        <h3>The DOM: Sample Code</h3>
+						          <pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title&gt;Test Page&lt;/title&gt;
+	  &lt;style&gt;
+	      h1 {
+	       color: red;
+	      }
+	  &lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	  &lt;h1&gt;My Page&lt;/h1&gt;
+	  &lt;p&gt;Hello World!&lt;/p&gt;
+	  &lt;img src="http://placebear.com/200/300" alt="bear"/&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+						  </code></pre>
+						      </section>
+
+						      <section>
+						        <h3>The DOM: Sample Model</h3>
+						        <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
+						      </section>
+
+									<section>
+						        <h3>Let's Develop It</h3>
+						        <ol>
+											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+						          <li>Inspect Element and explore the DOM</li>
+											<li>Click on an Element and change the text</li>
+											<li>Click on an Element and change a style</li>
+											<li>Refresh the page</li>
+						        </ol>
+						      </section>
+
+									<section>
+										<h3>THERE'S JAVASCRIPT FOR THAT!</h3>
+										<ul>
+											<li class="fragment">Everything you just did can happen with JavaScript</li>
+											<li class="fragment">You can write code to target specific areas of a web page and change them dynamically.</li>
+										</ul>
+									</section>
+
+									<section>
+									  <h3>Review: Anatomy of a website</h3>
+									  <div class = "blue"> Your Content</div>
+									  <div><span class = "blue">+ HTML: </span>Structure</div>
+									  <div><span class = "blue">+ CSS: </span>Presentation</div>
+									  <div class = "blue">= Your Website</div>
+									  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
+									</section>
+
+									<section>
+									<h3>IDs vs. Classes</h3>
+									  <div class = "left-align">
+									    <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
+									    <p>The "#" is how you tell CSS "this is an id."</p>
+									  </div>
+									  <div class = "left-align">
+									    <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
+									    <p>The "." is how you tell CSS "this is a class name."</p>
+									  </div>
+									</section>
+
+									<section>
+										<h3>Let's Develop It</h3>
+										<p>We are going to change the DOM with Javascript.</p>
+										<ol>
+											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+											<li>Open up your console</li>
+											<li>type the code below into the console</li>
+										</ol>
+										<pre><code>
+document.getElementsByTagName("a")[0].style.backgroundColor="orange";
+
+</pre></code>
+									</section>
+
+									<section>
+			              <h3>DOM Access: By Tag Name</h3>
+			              <p>You can get certain types of HTML elements using this method:</p>
+			              <pre><code>
+// document.getElementsByTagName(tagName) - get list;
+document.getElementsByTagName("a");
+
+// document.getElementsByTagName(tagName)[number] - get 1;
+document.getElementsByTagName("0");
+
+						  </code></pre>
+								</section>
+
+			            <section>
+			              <h3>DOM Access: HTML 5</h3>
+			              <p>In newer browsers, you can use other methods too.</p>
+			              <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
+			              <pre><code>
+// document.getElementsByClassName(className);
+document.getElementsByClassName("example");
+						  </code></pre>
+			              <p>Available in <a href="http://caniuse.com/#search=querySelectorAll">IE8+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
+			              <pre><code>
+// document.querySelector(cssQuery) - Get first one;
+document.querySelector(".example");
+
+// document.querySelectorAll(cssQuery) - Get All;
+document.querySelectorAll(".example");
+						  </code></pre>
+			            </section>
+
+			            <section>
+			              <h3>getElement vs. getElements</h3>
+			              <p>Any method that starts with "getElement" will return a <span class = "blue">single</span> node.</p>
+			              <pre><code>
+document.getElementById('uniqueID'); //returns a single node
+						  </code></pre>
+			              <p>Any method that starts with "getElements" will return a <span class = "blue">array</span> of nodes. To modify a single node, you will need to use bracket notation to select the correct one.</p>
+			              <pre><code>
+document.getElementsByTagName('p'); //returns multiple nodes
+var specficParagraph = document.getElementsByTagName('p')[2];
+						  </code></pre>
+			            </section>
+
+									<section>
+										<h3>Let's Develop It</h3>
+										<p>We are going to change EVEN MORE of the DOM with Javascript.</p>
+										<ol>
+											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+											<li>Open up your console</li>
+											<li>Target an ID</li>
+											<li>Target an ID</li>
+									</section>
+
+									<section>
+										<h3>Summary</h3>
+										<ul>
+											<li class="fragment">Programming Fundamentals</li>
+											<li class="fragment">Our First Program</li>
+											<li class="fragment">JavaScript Files</li>
+											<li class="fragment">Developer Tools</li>
+											<li class="fragment">The DOM</li>
+											<li class="fragment">DOM Modification</li>
+										</ul>
+									</section>
+
+									<section>
+										<h3>Resources</h3>
+											<ul>
+												<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+												<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
+											</ul>
+									</section>
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">

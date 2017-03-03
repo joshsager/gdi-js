@@ -23,7 +23,7 @@
         <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,7 +42,7 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 4</h4>
             </section>
-            
+
         	<section>
 				<h3>You Will Learn About:</h3>
 				<ul>
@@ -50,7 +50,8 @@
 					<li class="fragment">Listeners</li>
 					<li class="fragment">This</li>
 					<li class="fragment">Forms</li>
-				</ul>	
+					<li class="fragment">Timing Events</li>
+				</ul>
 			</section>
 
 			<section>
@@ -73,18 +74,18 @@ element.onclick = function () {
                     <li>onload: The event occurs when a document has been loaded</li>
                     <li>onfocus: The event occurs when an element gets focus</li>
                 </ul>
-			</section>            
+			</section>
             <section>
                 <h3>Events and Code</h3>
                 <p>How do you make an event trigger some code?</p>
                 <ol>
                     <li>Break your code into functions</li>
                     <li>Associate a function with a JavaScript event</li>
-                </ol>                    
+                </ol>
 			</section>
             <section>
                 <h3>Calling Functions from HTML</h3>
-                <p>You can call a function directly from your HTML code:</p>	     	
+                <p>You can call a function directly from your HTML code:</p>
 			    <pre><code>
 &lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 				</code></pre>
@@ -94,9 +95,10 @@ function sayHi() {
 }
 				</code></pre>
             </section>
+
             <section>
-                <h3>Listening Functions</h3>
-                <p>Listening functions work like many of the other things we have done. First, find the object:</p>
+                <h3>DOM Events</h3>
+                <p>DOM Events work like many of the other things we have done. First, find the object:</p>
                 <pre><code>
 var myTarget = document.getElementById('clickMe');
                 </code></pre>
@@ -112,8 +114,26 @@ myTarget.onclick=function(){
                 <p>Download <a href="files/class4.zip">this week's sample code</a>.</p>
                 <p>Make some JavaScript code fire after an <code>onmouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
 
-			</section>            
- 
+			</section>
+
+			<section>
+					<h3>Event Listeners</h3>
+					<p>This is more of a modern way to work with DOM Events. Event Listeners work like many DOM Events. First, find the object:</p>
+					<p>Beware, this may not work in older browsers.</p>
+					<pre><code>
+var myTarget = document.getElementById('clickMe');
+myTarget.addEventListener("click", clickFunction)
+					</code></pre>
+					<p>Then handle that event with a function</p>
+					<pre><code>
+function clickHandler(){
+alert ('Hi!');
+}
+					</code></pre>
+</section>
+
+
+
             <section>
 				<h3>Preventing Defaults</h3>
 				<p>Elements like buttons and links have a default behaviors. However, the <code>event</code> objects has a built-in method to handle that:</p>
@@ -124,7 +144,7 @@ element.onclick = function (event) {
 
 				</code></pre>
 			</section>
-              			
+
 			<section>
 				<h3>This</h3>
 				<p>The keyword <code>this</code> references the element that the user has just interacted with</p>
@@ -141,21 +161,21 @@ element.onclick = function (event) {
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Write code that targets this link:</p> 
+                <p>Write code that targets this link:</p>
                 <pre><code>
 &lt;a href="http://girldevelopit.com/" id="gdiLink"&gt;Girl Develop It&lt;/a&gt;
 				</code></pre>
                 <p>When a user clicks the link, the page should display an error message instead of going to the Girl Develop It homepage.</p>
-			</section>            
-	
-			
+			</section>
+
+
 			<section>
                 <h3>Forms</h3>
                 <p>You can collect information from users to use in functions. The most common method is an HTML form</p>
                 <pre><code>
 &lt;form id="temperatureForm"&gt;
-    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in 
-    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit 
+    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in
+    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit
     &lt;input type="radio" name="tempFormat" value="C" /&gt;Celsius &lt;br /&gt;
     &lt;label for="submitButton"&gt;&lt;/label&gt; &lt;input id="tempSubmitButton" type="submit" value="Submit" /&gt;
 &lt;/form&gt;
@@ -200,7 +220,7 @@ submitButton.onclick = function (event) {
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Collect a value from the input box on the page. Use it inside a function of some kind. For example, collect a number and multiply it by five or collect a name and display a greeting.</p>
-			</section>  
+			</section>
 
             <section>
 				<h3>Timing Events</h3>
@@ -264,8 +284,8 @@ var targetPic = document.getElementById('turtlePic');
 targetPic.onclick = function () {
     var leftMarginValue = 0;
     function increaseMargin() {
-        leftMarginValue++  // update parameter each time 
-        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin 
+        leftMarginValue++  // update parameter each time
+        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin
         if (leftMarginValue === 200)  // check finish condition {
             clearInterval(movePic);
         }
@@ -285,7 +305,8 @@ targetPic.onclick = function () {
 					<li class="fragment">Listeners</li>
 					<li class="fragment">This</li>
 					<li class="fragment">Forms</li>
-				</ul>	
+					<li class="fragment">Timing Events</li>
+				</ul>
 			</section>
 
 			<section>
@@ -312,7 +333,7 @@ targetPic.onclick = function () {
 			<section>
 				<h1 class="title-only">Thank You</h1>
 			</section>
- 
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
