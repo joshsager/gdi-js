@@ -17,13 +17,13 @@ function numberfour(){
 	var beatle = "john";
 
 	if(beatle == "john"){
-		debug;
+		debugger;
 	}else if(beatle == "george"){
-		debug;	
+		debugger;	
 	}else if(beatle == "ringo"){
-		debug;
+		debugger;
 	}else if(beatle == "paul"){
-		debug;
+		debugger;
 	}
 }
 
@@ -31,3 +31,4 @@ function numberfour(){
 numberone();
 numberthree();
 numbertwo();
+numberfour();
