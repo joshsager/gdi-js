@@ -13,9 +13,7 @@ function numberthree(){
 	console.log("I am function number three");
 }
 
-function numberfour(){
-	var beatle = "john";
-
+function numberfour(beatle){
 	if(beatle == "john"){
 		debugger;
 	}else if(beatle == "george"){
@@ -27,8 +25,7 @@ function numberfour(){
 	}
 }
 
-
 numberone();
 numberthree();
 numbertwo();
-numberfour();
+numberfour("ringo");
