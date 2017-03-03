@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="reveal/css/theme/gdisunny.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css">
 
-		<!-- For syntax highlighting -->
+    <!-- For syntax highlighting -->
     <!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
     <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
@@ -36,403 +36,411 @@
 		<div class="reveal">
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-             <section>
+        <!-- Opening slide -->
+            <section>
                 <img class="no-border" src="images/gdi_logo_badge.png" alt="GDI logo">
                 <h3>JavaScript for Beginners</h3>
-                <h4>Class 3</h4>
+                <h4>Class 2</h4>
             </section>
 
 
-
-			<section>
-				<h3>You Will Learn About:</h3>
-				<ul>
-					<li class="fragment">Object Oriented Programming Re-Introduction</li>
-					<li class="fragment">Objects</li>
-					<li class="fragment">Nesting</li>
-					<li class="fragment">Object Methods</li>
-					<li class="fragment">DOM</li>
-					<li class="fragment">DOM Methods</li>
-					<li class="fragment">DOM Node Styles</li>
-				</ul>
-			</section>
-
-			<section>
-					<h3>Review</h3>
-					<p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
-					<pre><code>
+            <section>
+                <h3>Review</h3>
+                <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
+                <pre><code>
 function calculateTip(total) {
-var tipPercent = 0.15; //Can be changed
-return (total * tipPercent);
+    var tipPercent = 0.15; //Can be changed
+    return (total * tipPercent);
 }
 
 var billPreTip = 10;
 var billTip   = calculateTip(billPreTip);
 var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
-' Total: ' + (billPreTip + billTip);
+    ' Total: ' + (billPreTip + billTip);
 console.log(receipt);
-			</code></pre>
+				</code></pre>
+            </section>
+
+   			<section>
+				<h3>You will learn about:</h3>
+				<ul>
+					<li class="fragment">Variable Scope</li>
+					<li class="fragment">Booleans</li>
+					<li class="fragment">Control Flow</li>
+					<li class="fragment">Loops</li>
+					<li class="fragment">Arrays</li>
+					<li class="fragment">Array Manipulation</li>
+				</ul>
+			</section>
+
+            <section>
+                <h3>Variable Scope</h3>
+                <p>The scope of a variable is how long the computer will remember it.</p>
+
+
+            </section>
+            <section>
+                <h3>Global Scope</h3>
+                <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
+                  <pre><code>
+var awesomeGroup = 'Girl Develop It'; //Global scope
+function whatIsAwesome() {
+    console.log (awesomeGroup + ' is pretty awesome.'); //Will work
+}
+whatIsAwesome();
+
+				</code></pre>
+            </section>
+            <section>
+                <h3>Local Scope</h3>
+                <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
+                <pre><code>
+function whatIsAwesome() {
+    var awesomeGroup = 'Girl Develop It'; //Local scope
+    console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
+}
+whatIsAwesome();
+console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
+				</code></pre>
+            </section>
+
+            <section>
+                <h3>Boolean Variables</h3>
+                <p>Boolean variables represent the logical values True and False</p>
+                <pre><code>
+var catsAreBest = true;
+var dogsRule = false;
+				</code></pre>
+                <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
+            </section>
+
+            <section>
+                <h3>The if statement</h3>
+                <p>Use if to decide which lines of code to execute, based on a condition.</p>
+                <pre><code>
+if (condition) {
+  // statements to execute
+}
+				</code></pre>
+                <pre><code>
+var bananas = 5;
+if (bananas &gt; 0) {
+  console.log ('You have some bananas!');
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Comparison Operators</h3>
+                <table class="smalltext">
+                    <thead>
+                      <tr>
+                        <th width="150px">Example</th>
+                        <th width="250px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>a == b</td>
+                       <td>Equal</td>
+                       <td><strong><code>TRUE</code></strong> if a is equal to b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>a === b</td>
+                       <td>Identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if a is equal to b, and the same type. </td>
+                      </tr>
+                      <tr>
+                       <td>a != b</td>
+                       <td>Not equal</td>
+                       <td><strong><code>TRUE</code></strong> if a is not equal to b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>a !== b</td>
+                       <td>Not identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if a is not equal to b, or they are not the same type.</td>
+                      </tr>
+                      <tr>
+                       <td>a &lt; b</td>
+                       <td>Less than</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly less than b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &gt; b</td>
+                       <td>Greater than</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly greater than b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &lt;= b</td>
+                       <td>Less than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if a is less than or equal to b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &gt;= b</td>
+                       <td>Greater than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
+                      </tr>
+                    </tbody>
+                </table>
+			</section>
+            <section>
+                <h3>Watch out!</h3>
+                <p>Don't mix up = and ==</p>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p>
 			</section>
 
 			<section>
-				<h3>Review</h3>
-				<p>In the previous class we were working with Arrays</p>
-				<pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+				<h3>Control Flow</h3>
+				<p>Now that we have learned how to write instructions, interact with data, remember that data, output that data, and group all of those instructions together, it's now time to modify when those instructions execute. This is known as <strong>control flow</strong></p>
+				<img src="images/control-flow.png" />
+				<p class="credit">Image Credit: Google via Wikipedia</p>
+			</section>
+
+			<section>
+				<h1>Breakpoint Example</h1>
+				<a href="breakpoint.html">Breakpoint Example</a>
+			</section>
+
+            <section>
+                <h3>The if/else statement</h3>
+                <p>Use else to provide an alternate set of instructions.</p>
+                <pre><code>
+var age = 28;
+if (age &gt;= 16) {
+    console.log ('Yay, you can drive!');
+} else {
+    console.log ('Sorry, but you have ' + (16 - age) +
+    ' years until you can drive.');
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>The if/else if/else statement</h3>
+                <p>If you have multiple conditions, you can use else if.</p>
+                <pre><code>
+var age = 20;
+if (age &gt;= 35) {
+    console.log('You can vote AND hold any place in government!');
+} else if (age &gt;= 25) {
+    console.log('You can vote AND run for the Senate!');
+} else if (age &gt;= 18) {
+    console.log('You can vote!');
+} else {
+    console.log('You can\'t vote, but you can
+    still write your representatives.');
+}
+				</code></pre>
+            </section>
+             <section>
+				<h3>Let's Develop It</h3>
+                <p>Modify your "wear a coat" code for these conditions:</p>
+                <ol>
+                    <li>If it is less than 50 degrees, wear a coat.</li>
+                    <li>If it is less than 30 degrees, wear a coat and a hat.</li>
+                    <li>If it is less than 0 degrees, stay inside.</li>
+                    <li>Otherwise, wear whatever you want.</li>
+                </ol>
+			</section>
+            <section>
+				<h3>Logical Operators</h3>
+                <table>
+                    <thead>
+                      <tr>
+                        <th width="200px">Example</th>
+                        <th width="150px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>a &amp;&amp; b</td>
+                       <td>And</td>
+                       <td><strong><code>TRUE</code></strong> if both a and b are <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                      <tr>
+                      <td>a || b</td>
+                       <td>Or</td>
+                       <td><strong><code>TRUE</code></strong> if either a or b is <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                      <tr>
+                       <td>! a</td>
+                       <td>Not</td>
+                       <td><strong><code>TRUE</code></strong> if a is not <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                     </tbody>
+                </table>
+			</section>
+            <section>
+                <h3>Using logical operators</h3>
+                <p>You can use these operators to combine conditions.</p>
+                <pre><code>
+var bananas = 5;
+if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
+    console.log ('You have a reasonable number of bananas');
+} else {
+    console.log ('Check your banana supply');
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Add a logical operator to your what to wear program.</p>
+			</section>
+
+            <section>
+                <h3>While loops</h3>
+                <p>While will repeat the same code over and over until some condition is met.</p>
+                <pre><code>
+var bottlesOfBeer = 99;
+while (bottlesOfBeer &gt;= 1) {
+    console.log (bottlesOfBeer + ' bottles of beer on the wall');
+    bottlesOfBeer = bottlesOfBeer - 9;
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Infinite Loops</h3>
+                <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+			</section>
+            <section>
+                <h3>For loops</h3>
+                <p>For loops are very similar, but you declare a counter in the statement.</p>
+                <pre><code>
+//will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+    console.log (i);
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Loops and logic</h3>
+                <p>You can add other statements or logical operators inside the loops.</p>
+                <pre><code>
+//Count from 1 to 50
+for (var i = 1; i &lt;= 50; i++) {
+    console.log (i);
+    //Says 'Buzz' after multiples of three
+    if (i % 3 == 0) {
+        console.log (' Buzz');
+    }
+    //Says 'Bang' after multiples of five
+    if (i % 5 == 0) {
+        console.log (' Bang');
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Break</h3>
+                <p>To exit a loop, use the break statement.</p>
+                <pre><code>
+//Count from 100 to 200
+for (var i = 100; i &lt;= 200; i++) {
+    console.log('Testing ' + i);
+    //Stop at the first multiple of 7
+    if (i % 7 == 0) {
+        console.log('Found it! ' + i);
+        break;
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
+                <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+			</section>
+
+            <section>
+                <h3>Arrays</h3>
+                <p>Arrays are ordered lists of values.</p>
+                <pre><code>
+var arrayName = [element0, element1, ...];
+				</code></pre>
+                <p>You can put different types of data into an array.</p>
+                <pre><code>
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+				</code></pre>
+            </section>
+            <section>
+                <h3>Array Length</h3>
+                <p>The length property tells you how many things are in an array</p>
+                <pre><code>
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
 console.log(rainbowColors.length);
-var rainbowColors.push('Periwinkle');
-console.log(rainbowColors);
-				</pre></code>
-			</section>
-
-			<section>
-				<h3>And Arrays are...</h3>
-				<p class="fragment">Wait for it...</p>
-				<p class="fragment">Wait for it...</p>
-				<p class="fragment">Wait for it...</p>
-				<h4 class="fragment">OBJECTS!!!</h4>
-			</section>
-
-			<section>
-				<h3>Object Oriented Programming Re-Introduction</h3>
-				<ul>
-					<li class="fragment">Objects - <span class="fragment">Fancy name for the thing</span></li>
-					<li class="fragment">Methods - <span class="fragment">Fancy name for a function</span></li>
-					<li class="fragment">Properties - <span class="fragment">Fancy name for a variable</span></li>
-					<li class="fragment">Events - <span class="fragment">Fancy way to trigger code execution</span></li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Built-In JavaScript Objects</h3>
-				<p>At the time these slides were authored there are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">18</a> fundamental built-in JavaScript objects.</p>
-			</section>
-
-			<section>
-				<h3>What does this mean?</h3>
-				<ul>
-					<li class="fragment">The JavaScript language has 18 built-in objects ready for you to use</li>
-					<li class="fragment">Objects are a great way to group similar behaviors under one common name</li>
-					<li class="fragment">It's very easy to create your own objects</li>
-					<li class="fragment">Objects are at the root of all popular JavaScript frameworks like JQuery, Angular, React, etc.</li>
-				</ul>
-			</section>
-
-            <section>
-			  <h3>Objects</h3>
-			  <p>Objects let us store a collection of properties.</p>
-              <pre><code>
-var objectName = {
-  propertyName: propertyValue,
-  propertyName: propertyValue,
-  ...
-};
-			  </code></pre>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn',
-  likes: ['knitting', 'code'],
-  birthday: {month: 10, day: 17}
-};
-			  </code></pre>
-			</section>
-            <section>
-			  <h3>Accessing Objects</h3>
-			  <p>You can retrieve values using "dot notation"</p>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn'
-};
-var myHometown = aboutMe.hometown;
-			  </code></pre>
-              <p>Or using "bracket notation" (like arrays)</p>
-              <pre><code>
-var myHair = aboutMe['hair'];
-			  </code></pre>
-			</section>
-            <section>
-			  <h3>Changing Objects</h3>
-			  <p>You can use dot or bracket notation to change properties</p>
-              <pre><code>
-var aboutMe = {
-  hometown: 'Atlanta, GA',
-  hair: 'Auburn'
-};
-aboutMe.hair = 'blue';
-			  </code></pre>
-              <p>Add new properties</p>
-              <pre><code>
-aboutMe.pet = 'cat';
-			  </code></pre>
-              <p>Or delete them</p>
-              <pre><code>
-delete aboutMe.pet;
-			  </code></pre>
-			</section>
-            <section>
-			  <h3>Arrays of Objects</h3>
-			  <p>Since arrays can hold any data type, they can also hold objects</p>
-              <pre><code>
-var myCats = [
-  {name: 'Lizzie',
-   age: 18},
-  {name: 'Daemon',
-   age: 1}
-];
-
-for (var i = 0; i &lt; myCats.length; i++) {
-  var myCat = myCats[i];
-  console.log(myCat.name + ' is ' + myCat.age + ' years old.');
-}
-			  </code></pre>
-			</section>
-            <section>
-			  <h3>Arrays of Objects</h3>
-			  <p>Just like other data types, objects can be passed into functions:</p>
-              <pre><code>
-var lizzieTheCat = {
-  age: 18,
-  furColor: 'grey',
-  likes: ['catnip', 'milk'],
-  birthday: {month: 7, day: 17, year: 1996}
-}
-
-function describeCat(cat) {
-  console.log('This cat is ' + cat.age + ' years old with ' + cat.furColor + ' fur.');
-}
-
-describeCat(lizzieTheCat);
-			  </code></pre>
-			</section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
-                <p>Try displaying some information about your recipe.</p>
-                <p>Bonus: Create a loop to list all the ingredients.</p>
-			</section>
-
-            <section>
-              <h3>Object methods</h3>
-			  <p>Objects can also hold functions.</p>
-              <pre><code>
-var lizzieTheCat = {
-  age: 18,
-  furColor: 'grey',
-  meow: function() {
-    console.log('meowww');
-  },
-  eat: function(food) {
-    console.log('Yum, I love ' + food);
-  }
-};
-			  </code></pre>
-              <p>Call object methods using dot notation:</p>
-              <pre><code>
-lizzieTheCat.meow();
-lizzieTheCat.eat('brown mushy stuff');
-			  </code></pre>
+				</code></pre>
             </section>
             <section>
-              <h3>Built-in methods</h3>
-              <p>JS provides several built-in objects:</p>
-              <ul>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
-                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
-              </ul>
-            </section>
-
-						<section>
-							<h3>The Document Object</h3>
-							<p>As with all objects. They have 3 main parts, methods, properties, and events.</p>
-							<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">full list</a> of all of these related to the document object.</p>
-						</section>
-
-			      <section>
-			        <h3>DOM Access</h3>
-			        <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
-			        <ol>
-			          <li>Find the DOM node and store it in a variable</li>
-			          <li>Use methods to manipulate the node</li>
-			        </ol>
-			      </section>
-
-            <section>
-              <h3>DOM Access: By Id</h3>
-              <p>You can find nodes by id using the method:</p>
-              <pre><code>
-document.getElementById(id);
-			  </code></pre>
-              <p>To find:</p>
-              <pre><code>
-&lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
-			  </code></pre>
-              <p>We would use:</p>
-              <pre><code>
-var imgBear = document.getElementById('bearPic');
-			  </code></pre>
-            </section>
-
-            <section>
-              <h3>DOM Access: By Tag Name</h3>
-              <p>You can use certain types of HTML elements using this method:</p>
-              <pre><code>
-document.getElementsByTagName(tagName);
-			  </code></pre>
-              <p>To find:</p>
-              <pre><code>
-&lt;li&gt;Daisy&lt;/li&gt;
-&lt;li&gt;Tulip&lt;/li&gt;
-			  </code></pre>
-              <p>We would use:</p>
-              <pre><code>
-var listItems = document.getElementsByTagName('li');
-for (var i =0; i &lt; listItems.length; i++) {
-  var listItem = listItems[i];
-}
-			  </code></pre>
-            </section>
-
-            <section>
-              <h3>DOM Nodes: Attributes</h3>
-              <p>You can access and change attributes of DOM nodes using dot notation.</p>
-              <p>To change this element:</p>
-              <pre><code>
-&lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
-			  </code></pre>
-              <p>We could change the src attribute this way:</p>
-              <pre><code>
-var imgBear = document.getElementById('bearPic');
-var oldSrc = imgBear.src;
-imgBear.src = 'http://placebear.com/100/500';
-			  </code></pre>
+                <h3>Using Arrays</h3>
+                <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
+                <pre><code>
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var firstColor = rainbowColors[0];
+var lastColor = rainbowColors[6];
+				</code></pre>
             </section>
             <section>
-              <h3>DOM Nodes: Getting and Setting Attributes</h3>
-              <p>You can also use <code>getAttribute/setAttribute</code></p>
-              <pre><code>
-&lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
-			  </code></pre>
-              <p>We could change the src attribute this way:</p>
-              <pre><code>
-var imgBear = document.getElementById('bearPic');
-var oldSrc = imgBear.getAttribute('src');
-imgBear.setAttribute('src', 'http://placebear.com/100/500');
-			  </code></pre>
+                <h3>Changing arrays</h3>
+                <p>You can use bracket notation to change an item in an array</p>
+                <pre><code>
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+myFavoriteThings[0] = 'Asparagus';
+                </code></pre>
             </section>
             <section>
-              <h3>DOM Nodes: Styles</h3>
-              <p>You can change page css using <code>style</code></p>
-              <p>To make this CSS:</p>
-              <pre><code>
-body {
-  color: red;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.style.color = 'red';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM Nodes: More Styles</h3>
-              <p>Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number</p>
-              <p>To make this CSS:</p>
-              <pre><code>
-body {
-  background-color: pink;
-  padding-top: 10px;
-}
-			  </code></pre>
-              <p>Use this JavaScript:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0]
-pageNode.style.backgroundColor = 'pink';
-pageNode.style.paddingTop = '10px';
-			  </code></pre>
+                <h3>Expanding arrays</h3>
+                <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
+                <pre><code>
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+myFavoriteThings.push('Dancing');
+                </code></pre>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
-                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+                <p>Create an array of your favorite foods. Echo a few values onto your screen.</p>
 			</section>
 
             <section>
-              <h3>DOM innerHTML</h3>
-              <p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
-              <p>For example, you can overwrite the entire body:</p>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-pageNode.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt; &lt;p&gt;I just changed the whole page!&lt;/p&gt;'
-			  </code></pre>
-              <p>Or just add some new content to the end</p>
-              <pre><code>
-pageNode.innerHTML += '...just adding this bit at the end of the page.';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>DOM innerHTML continued</h3>
-              <p>You can also target a particular element</p>
-              <p>To fill this HTML element:</p>
-              <pre><code>
-&lt;p id="warning"&gt;&lt;/p&gt;
-			  </code></pre>
-              <p>We can select the node and modify it</p>
-              <pre><code>
-var warningParagraph = document.getElementById('warning');
-warningParagraph.innerHTML = 'Danger Will Robinson!';
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes</h3>
-              <p>The <code>document</code> object also provides ways to create nodes from scratch:</p>
-              <pre><code>
-document.createElement(tagName);
-document.createTextNode(text);
-document.appendChild();
-			  </code></pre>
-            </section>
-            <section>
-              <h3>Creating New Nodes: Sample Code</h3>
-              <pre><code>
-var pageNode = document.getElementsByTagName('body')[0];
-
-var newImg = document.createElement('img');
-newImg.src = 'http://placebear.com/400/300';
-newImg.style.border = '1px solid black';
-pageNode.appendChild(newImg);
-
-var newParagraph = document.createElement('p');
-var paragraphText = document.createTextNode('Squee!');
-newParagraph.appendChild(paragraphText);
-pageNode.appendChild(newParagraph);
-			  </code></pre>
+                <h3>Iterating through arrays</h3>
+                <p>Use a for loop to easily process each item in an array.</p>
+                <pre><code>
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+for (var i = 0; i &lt; rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}
+                </code></pre>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create a new paragraph element and add it to a div on your page.</p>
+                <p>Use a loop to make a list of all your favorite foods.</p>
 			</section>
 
 			<section>
-				<h3>Summary:</h3>
+				<h3>Summary</h3>
 				<ul>
-					<li class="fragment">Object Oriented Programming Re-Introduction</li>
-					<li class="fragment">Objects</li>
-					<li class="fragment">Nesting</li>
-					<li class="fragment">Object Methods</li>
-					<li class="fragment">DOM</li>
-					<li class="fragment">DOM Methods</li>
-					<li class="fragment">DOM Node Styles</li>
+					<li class="fragment">Variable Scope</li>
+					<li class="fragment">Booleans</li>
+					<li class="fragment">Control Flow</li>
+					<li class="fragment">Loops</li>
+					<li class="fragment">Arrays</li>
+					<li class="fragment">Array Manipulation</li>
 				</ul>
 			</section>
 
+		  	<section>
+				<h3>Survey</h3>
+				<p>GDI Intro to JavaScript Class Survey <a href="http://goo.gl/forms/8s5lBq4Bqe">Survey Link</a></p>
+			</section>
 
 			<section>
 				<h3>Resources</h3>
