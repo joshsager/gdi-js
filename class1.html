@@ -103,6 +103,8 @@
 					<li class="fragment">As of 2012, all modern browsers fully support ECMAScript 5.1.</li>
 					<li class="fragment">Older browsers support at least ECMAScript 3. </li>
 					<li class="fragment">On June 17, 2015, ECMA International published the sixth major version of ECMAScript, which is officially called ECMAScript 2015.</li>
+					<li class="fragment">On June, 2016, ECMA International published the seventh major version of ECMAScript, which is officially called ECMAScript 2016. Many people call it ES6</li>
+					<li class="fragment">On June, 2017, ECMA International published the eigth major version of ECMAScript, which is officially called ECMAScript 2017. Many people call it ES7</li>
 				</ul>
 			</section>
 
@@ -116,28 +118,37 @@
 				</ul>
 			</section>
 
+			<section>
+				<h3>THIS IS IMPORTANT</h3>
+					<p class="fragment">Despite the constant changes programming fundamentals ALWAYS STAY THE SAME!</p>
+			</section>
+
 
 			<section>
 				<h3>So What is JavaScript Used for?</h3>
 				<ul>
           <li class="fragment">JavaScript interfaces with HTML and CSS.</li>
-          <li class="fragment">JavaScript lets you build dynamic webpages that respond to input from users.</li>
-					<li class="fragment">HTML is the structure.</li>
-					<li class="fragment">CSS is the layout and style.</li>
+          <li class="fragment">JavaScript lets you add logic to your webpages that can respond to what users do.</li>
+					<li class="fragment">To collect data from users.</li>
+					<li class="fragment">To build web software a.k.a. applications.</li>
+					<li class="fragment">To create games.</li>
         </ul>
       </section>
 
 			<section>
+				<h3>The Players and Their Roles</h3>
+				<ul>
+					<li class="fragment">HTML is the structure.</li>
+					<li class="fragment">CSS is the layout and style.</li>
+					<li class="fragment">Javascript is the brains!!!</li>
+        </ul>
+      </section>
+
+			<!-- <section>
 				<h1>Breakout</h1>
 				<a href="JS_Breakout-for-breakpoint-example/index.html"><img src="images/breakout.png" /></a>
 				<p class="credit">Image credit: Josh Sager</p>
-			</section>
-
-			<section>
-				<h1 class="title-only">Javascript is the brains!!!</h1>
-			</section>
-
-
+			</section> -->
 
 			<section>
 				<h3>You Will Learn About:</h3>
@@ -177,10 +188,10 @@
 
 			<section>
 				<h3>One more thing...</h3>
-				<p class="fragment">At the time these slides were authored there are only <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">33</a> statements and declarations. Which is the core part of the language. I find that encouraging!</p>
+				<p class="fragment">At the time these slides were authored there are only <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">33</a> reserved words. Which is the core part of the language. I find that encouraging!</p>
 				<br />
 				<h4 class="fragment">Okay two things...</h4>
-				<p class="fragment">Most everyday development only requires around half of them.</p>
+				<p class="fragment">Most everyday development only requires less than half of them.</p>
 			</section>
 
 			<section>
@@ -189,6 +200,7 @@
 
             <section>
                 <h3>JavaScript is a client-side language</h3>
+								<p>It is a just in time complied language.</p>
                 <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
 				<p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
             </section>
@@ -242,7 +254,7 @@
 			<section>
 				<h3>Developer Tools</h3>
 				<p>console.log(); is a special command that can only be seen by the developer tools.</p>
-				<p>The console is a GREAT debugging tool. Most modern browsers have a console</p>
+				<p>The console is a GREAT debugging tool. Most modern browsers have a console.</p>
 				<img src="images/console.png" />
 			</section>
             <section>
@@ -305,10 +317,13 @@ document.write('Hello World!');
 						  <h1 class="title-only">So What is DOM?</h1>
 						</section>
 
-						      <section>
-						        <h3>The DOM Tree</h3>
-						        <p>It's the nested structure of an HTML page as a DOM Tree. The browser makes a "map" of all the elements on a page.</p>
-						      </section>
+			      <section>
+			        <h3>So What is DOM?</h3>
+							<p>It's a tree!</p>
+			        <p>It's the nested structure of an HTML page in the form of a tree. The browser makes a "map" of all the elements on a page.</p>
+			      </section>
+
+
 						      <section>
 						        <h3>The DOM: Sample Code</h3>
 						          <pre><code>
@@ -339,7 +354,7 @@ document.write('Hello World!');
 									<section>
 						        <h3>Let's Develop It</h3>
 						        <ol>
-											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+											<li>Visit <a href="https://www.carnegielibrary.org/" target="_blank">Carnegie Library Website</a></li>
 						          <li>Inspect Element and explore the DOM</li>
 											<li>Click on an Element and change the text</li>
 											<li>Click on an Element and change a style</li>
@@ -380,12 +395,12 @@ document.write('Hello World!');
 										<h3>Let's Develop It</h3>
 										<p>We are going to change the DOM with Javascript.</p>
 										<ol>
-											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+											<li>Visit <a href="https://www.carnegielibrary.org/" target="_blank">Carnegie Library</a></li>
 											<li>Open up your console</li>
 											<li>type the code below into the console</li>
 										</ol>
 										<pre><code>
-document.getElementsByTagName("a")[0].style.backgroundColor="orange";
+document.getElementsByTagName("h3")[0].style.backgroundColor="orange";
 
 </pre></code>
 									</section>
@@ -405,7 +420,7 @@ document.getElementsByTagName("0");
 
 			            <section>
 			              <h3>DOM Access: HTML 5</h3>
-			              <p>In newer browsers, you can use other methods too.</p>
+			              <p>In modern browsers, you can use other methods too.</p>
 			              <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
 			              <pre><code>
 // document.getElementsByClassName(className);
@@ -438,10 +453,10 @@ var specficParagraph = document.getElementsByTagName('p')[2];
 										<h3>Let's Develop It</h3>
 										<p>We are going to change EVEN MORE of the DOM with Javascript.</p>
 										<ol>
-											<li>Visit <a href="https://www.nasa.gov/">NASA</a></li>
+											<li>Visit <a href="https://www.carnegielibrary.org/" target="_blank">Carnegie Library</a></li>
 											<li>Open up your console</li>
-											<li>Target an ID</li>
-											<li>Target an ID</li>
+											<li>Target a class and change the backgroud color</li>
+											<li>Target an element (html tag) and change the background color</li>
 									</section>
 
 									<section>
