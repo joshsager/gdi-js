@@ -289,14 +289,23 @@
 						</section>
 						<section>
 								<h3>Returning Values</h3>
-								<p>You can have a function give you back a value, to use later.</p>
+								<p>You can have a function give you back a value.</p>
 								<pre><code>
 &lt;script&gt;
-  function square(num) {
-    return num * num;
+  function addNumbers(num1, num2){
+    return num1 + num2;
   }
-  console.log(square(4));   // outputs '16'.
-  var squareOfFive = square(5); // will make squareOfFive equal 25.
+
+  var resultOfAddingNumbers = addNumbers(2,2);
+  console.log(resultOfAddingNumbers);
+
+  function subtractNumbers(num1, num2){
+    num1 - num2;
+  }
+
+  var resultOfSubtractingNumbers = subtractNumbers(2,2);
+  console.log(resultOfSubtractingNumbers);
+
 &lt;/script&gt;
 						</code></pre>
 								<p>Return will immediately end a function.</p>
