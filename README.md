@@ -9,22 +9,28 @@ The course is meant to be taught in 4 two-hour sections. Each of the slides and 
 
 ### Class 1
 
-Introduction to JavaScript and Basic Programming Concepts
+Introduction to JavaScript and The DOM
 
-An overview of the history of JavaScript, what it is, and how it interacts with the browser. Covers basic JavaScript concepts including variables, data types, and functions. 
+An overview of the history of JavaScript, what it is, and how it interacts with the browser. Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes.
 
 ### Class 2
+Basic Programming
+
+Covers basic JavaScript concepts including variables, data types, and functions. 
+
+### Class 3
 Control Flow
 
 Introduces boolean variable, if/then statements, loops, and arrays.
 
-### Class 3
-
-Introduction to the DOM
-
-Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes.
-
 ### Class 4
+
+Introduction to Object Oriented Programming
+
+Introduction to some of the fundamentals of OOP and how that applys to DOM manipulation. 
+
+
+### Class 5
 
 Events and Animations
 
