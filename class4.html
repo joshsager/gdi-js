@@ -48,7 +48,6 @@
 				<ul>
 					<li class="fragment">Events</li>
 					<li class="fragment">Listeners</li>
-					<li class="fragment">This</li>
 					<li class="fragment">Forms</li>
 					<li class="fragment">DOM</li>
 					<li class="fragment">DOM Methods</li>
@@ -59,23 +58,22 @@
 
 			<section>
 				<h3>Events</h3>
-				<p>An 'event' is a type of object that is created when the user interacts with a web page.</p>
-                <p>For example, JS creates an event when a user clicks an element.</p>
+				<p>An 'event' is when something happens. For example when the user mouses over a link in a web page.</p>
                 <pre><code>
-element.onclick = function () {
-  //code to execute when the click happens
+element.onmouseover = function () {
+  //code to execute when the mouse over happens
 };
 				</code></pre>
 			</section>
             <section>
 				<h3>Types of Events</h3>
-				<p>There are <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">variety of events</a>. Some of the most common:</p>
+				<p class="fragment">There are <a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">variety of events</a>. Some of the most common are:</p>
                 <ul>
-                    <li>onclick: The event occurs when the user clicks on an element</li>
-                    <li>onmouseover: The event occurs when the pointer is moved onto an element</li>
-                    <li>onkeyup: The event occurs when the user releases a key</li>
-                    <li>onload: The event occurs when a document has been loaded</li>
-                    <li>onfocus: The event occurs when an element gets focus</li>
+                    <li class="fragment">onclick: The event occurs when the user clicks on an element</li>
+                    <li class="fragment">onmouseover: The event occurs when the pointer is moved onto an element</li>
+                    <li class="fragment">onkeyup: The event occurs when the user releases a key</li>
+                    <li class="fragment">onload: The event occurs when a document has been loaded</li>
+                    <li class="fragment">onfocus: The event occurs when an element gets focus</li>
                 </ul>
 			</section>
             <section>
@@ -87,8 +85,8 @@ element.onclick = function () {
                 </ol>
 			</section>
             <section>
-                <h3>Calling Functions from HTML</h3>
-                <p>You can call a function directly from your HTML code:</p>
+                <h3>Events Created via HTML</h3>
+                <p>You can create a JavaScript event via HTML and call it via JavaScript.</p>
 			    <pre><code>
 &lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 				</code></pre>
@@ -99,56 +97,78 @@ function sayHi() {
 				</code></pre>
             </section>
 
+    <section>
+        <h3>Events Created via HTML</h3>
+				<p>A few things to know.</p>
+				<ol>
+        <li class="fragment">It's much more common to set the events in your JavaScript file.</li>
+				<li class="fragment">You might still see this approach with older google analytics tracking.</li>
+				<li class="fragment">There are multiple ways to create events.</li>
+			  </ol>
+		</section>
+
             <section>
-                <h3>DOM Events</h3>
-                <p>DOM Events work like many of the other things we have done. First, find the object:</p>
-                <pre><code>
+                <h3>Basic Events Created via JavaScript</h3>
+                <p>DOM Events work like many of the other things we have done.</p>
+								<p class="fragment">1. Find the object</p>
+                <pre class="fragment"><code>
 var myTarget = document.getElementById('clickMe');
                 </code></pre>
-                <p>Then add an event to that object:</p>
-                <pre><code>
+                <p class="fragment">2. Then add an event to that object:</p>
+                <pre class="fragment"><code>
 myTarget.onclick=function(){
      alert ('Hi!');
 }
                 </code></pre>
 			</section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Download <a href="files/class4a.zip">this sample code</a>.</p>
-                <p>Make some JavaScript code fire after an <code>onmouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
 
+      <section>
+				<h3>Let's Develop It</h3>
+        <p>Download <a href="files/class4a.zip">this sample code</a>.</p>
+        <p>Create an alert box when you <code>onmouseover</code> the turtle image. Try another event of your choice.</p>
 			</section>
 
 			<section>
 					<h3>Event Listeners</h3>
-					<p>This is more of a modern way to work with DOM Events. Event Listeners work like many DOM Events. First, find the object:</p>
-					<p>Beware, this may not work in older browsers.</p>
-					<pre><code>
+					<p class="fragment">This is more of a modern way to work with Events by creating Event Listeners and Event Handlers.</p>
+					<p class="fragment">Beware, this may not work in older browsers.</p>
+					<p class="fragment">1. Find the object:</p>
+					<pre class="fragment"><code>
 var myTarget = document.getElementById('clickMe');
-myTarget.addEventListener("click", clickFunction)
 					</code></pre>
-					<p>Then handle that event with a function</p>
-					<pre><code>
+					<p class="fragment">2. Add the Event Listener:</p>
+					<pre class="fragment"><code>
+myTarget.addEventListener("click", clickHandler);
+					</code></pre>
+					<p class="fragment">3. Add the Event Handler:</p>
+					<pre class="fragment"><code>
 function clickHandler(){
 alert ('Hi!');
 }
 					</code></pre>
 </section>
+			<section>
+				<h3>Let's Develop It</h3>
+				<p>Use the previously downloaded <a href="files/class4a.zip">sample code</a>.</p>
+				<p>Create an alert box when you <code>onmouseover</code> the turtle image using event listeners and event handlers. Try another event listener of your choice.</p>
+			</section>
 
 
 
             <section>
-				<h3>Preventing Defaults</h3>
-				<p>Elements like buttons and links have a default behaviors. However, the <code>event</code> objects has a built-in method to handle that:</p>
-                <pre><code>
+				<h3>Sometimes Links Should Not Link</h3>
+				<p class="fragment">At times you might have an <code>&lt;a href="#"&gt;link&lt;/a&gt;</code> but you don't want to the href to go to another page.</a>
+				<p class="fragment">There is a built-in method to handle that:</p>
+                <pre class="fragment"><code>
 element.onclick = function (event) {
   event.preventDefault();
 };
 
 				</code></pre>
+				<p class="fragment">Note the event argument</p>
 			</section>
 
-			<section>
+			<!-- <section>
 				<h3>This</h3>
 				<p>The keyword <code>this</code> references the element that the user has just interacted with</p>
                 <pre><code>
@@ -161,7 +181,8 @@ element.onclick = function (event) {
   this.innerHTML = 'I've been clicked!';
 };
 				</code></pre>
-			</section>
+			</section> -->
+
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Write code that targets this link:</p>
@@ -198,138 +219,182 @@ console.log (temperature);
                 <p>Radio buttons usually do not have IDs, so you will need to use an array:</p>
                 <pre><code>
 var radios = document.getElementsByName('tempFormat');
+var button = document.getElementById('getValue');
 
-for (var i = 0, length = radios.length; i &lt; length; i++) {
-    if (radios[i].checked) {
-        var radioButtonValue = radios[i].value;
-        // only one radio can be checked, so stop now
-        break;
-    }
+button.addEventListener("click", handleClick);
+
+function handleClick(event){
+  for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+          var radioButtonValue = radios[i].value;
+          // only one radio can be checked, so stop now
+          alert(radioButtonValue);
+          break;
+      }
+  }
 }
 				</code></pre>
 			</section>
              <section>
-                <h3>Submit buttons</h3>
-                <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
+                <h3>Submit buttons Maybe Shouldn't Submit?</h3>
+                <p>If you are going to get form values by clicking the submit button we need to approach things in a different way.</p>
                 <pre><code>
-var submitButton = document.getElementById('tempSubmitButton');
-submitButton.onclick = function (event) {
-    event.preventDefault();
-    var temperature = document.getElementById('temp').value;
-    console.log (temperature);
+var submitButton = document.getElementById('simpleSubmit');
+
+simpleForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event){
+  var resultsBox = document.getElementById('resultsBox');
+  var inputValue = document.getElementById('inputValue');
+  event.preventDefault();
+
+  resultsBox.innerHTML = inputValue.value;
+
 }
 				</code></pre>
 			</section>
 
       <section>
 				<h3>Let's Develop It</h3>
-                <p>Collect a value from the input box on the page. Use it inside a function of some kind. For example, collect a number and multiply it by five or collect a name and display a greeting.</p>
+        <p>Collect a value from the input box on the page. Display that value on the page.</p>
 			</section>
 
 			<section>
-				<h3>Putting it all together with the DOM</h3>
-				<p>Let's dig in a little deeper with the DOM.</p>
-			</section>
-
-			<section>
-				<h3>DOM Access</h3>
-				<p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
+				<h3>DOM Review</h3>
+				<p class="fragment">The browser automatically builds a Document object of the entire page.</p>
+				<p class="fragment">To interact with the page you need to do at least 3 things</p>
 				<ol>
-					<li>Find the DOM node and store it in a variable</li>
-					<li>Use methods to manipulate the node</li>
+					<li class="fragment">Find the element and store it in a variable</li>
+					<li class="fragment">Create an Event Listener</li>
+					<li class="fragment">Create an Event Handler</li>
 				</ol>
 			</section>
 
 			<section>
+				<h3>Ways to find elements</h3>
+				<ul>
+					<li class="fragment">By Id</li>
+					<li class="fragment">By Tag Name</li>
+					<li class="fragment">By Class Name</li>
+				</ul>
+			</section>
+
+			<section>
 				<h3>DOM Access: By Id</h3>
-				<p>You can find nodes by id using the method:</p>
-				<pre><code>
+				<p class="fragment">You can find nodes by id using the method:</p>
+				<pre class="fragment"><code>
 document.getElementById(id);
 	</code></pre>
-				<p>To find:</p>
-				<pre><code>
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
 &lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
 	</code></pre>
-				<p>We would use:</p>
-				<pre><code>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
 var imgBear = document.getElementById('bearPic');
+console.log(imgBear);
 	</code></pre>
 			</section>
 
 			<section>
 				<h3>DOM Access: By Tag Name</h3>
-				<p>You can use certain types of HTML elements using this method:</p>
-				<pre><code>
+				<p class="fragment">You can find list of elements by Tage Name:</p>
+				<pre class="fragment"><code>
 document.getElementsByTagName(tagName);
 	</code></pre>
-				<p>To find:</p>
-				<pre><code>
-&lt;li&gt;Daisy&lt;/li&gt;
-&lt;li&gt;Tulip&lt;/li&gt;
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
+&lt;ol&gt;
+    &lt;li&gt;Daisy&lt;/li&gt;
+    &lt;li&gt;Tulip&lt;/li&gt;
+&lt;/ol&gt;
 	</code></pre>
-				<p>We would use:</p>
-				<pre><code>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
 var listItems = document.getElementsByTagName('li');
-for (var i =0; i &lt; listItems.length; i++) {
-var listItem = listItems[i];
-}
+console.log(listItems);
 	</code></pre>
+			</section>
+
+			<section>
+				<h3>DOM Access: By Class Name</h3>
+				<p class="fragment">You can find a list of elements by class Name:</p>
+				<pre class="fragment"><code>
+document.getElementsByClassName(className);
+	</code></pre>
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
+&lt;h2 class="master-headline"&gt;My Blog Post&lt;/h2&gt;
+	</code></pre>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
+var headline = document.getElementsByClassName('master-headline');
+console.log(headline);
+	</code></pre>
+			</section>
+
+			<section>
+				<h3>What Now? It's Time for Change</h3>
+				<p class="fragment">Now that the element is stored in a variable, we can access the properties and change them.</p>
 			</section>
 
 			<section>
 				<h3>DOM Nodes: Attributes</h3>
 				<p>You can access and change attributes of DOM nodes using dot notation.</p>
-				<p>To change this element:</p>
-				<pre><code>
+				<p class="fragment">To change this element:</p>
+				<pre class="fragment"><code>
 &lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
 	</code></pre>
-				<p>We could change the src attribute this way:</p>
-				<pre><code>
+				<p class="fragment">We could change the src attribute this way:</p>
+				<pre class="fragment"><code>
 var imgBear = document.getElementById('bearPic');
 var oldSrc = imgBear.src;
 imgBear.src = 'http://placebear.com/100/500';
 	</code></pre>
 			</section>
+
 			<section>
 				<h3>DOM Nodes: Getting and Setting Attributes</h3>
-				<p>You can also use <code>getAttribute/setAttribute</code></p>
-				<pre><code>
+				<p class="fragment">You can also use <code>getAttribute/setAttribute</code></p>
+				<pre class="fragment"><code>
 &lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
 	</code></pre>
-				<p>We could change the src attribute this way:</p>
-				<pre><code>
+				<p class="fragment">We could change the src attribute this way:</p>
+				<pre class="fragment"><code>
 var imgBear = document.getElementById('bearPic');
 var oldSrc = imgBear.getAttribute('src');
 imgBear.setAttribute('src', 'http://placebear.com/100/500');
 	</code></pre>
 			</section>
+
 			<section>
 				<h3>DOM Nodes: Styles</h3>
-				<p>You can change page css using <code>style</code></p>
-				<p>To make this CSS:</p>
-				<pre><code>
+				<p>The most common properties to change are styles.</p>
+				<p class="fragment">To make this style change via JavaScript:</p>
+				<pre class="fragment"><code>
 body {
 color: red;
 }
 	</code></pre>
-				<p>Use this JavaScript:</p>
-				<pre><code>
+				<p class="fragment">Use this JavaScript:</p>
+				<pre class="fragment"><code>
 var pageNode = document.getElementsByTagName('body')[0];
 pageNode.style.color = 'red';
 	</code></pre>
 			</section>
+
 			<section>
-				<h3>DOM Nodes: More Styles</h3>
-				<p>Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number</p>
-				<p>To make this CSS:</p>
-				<pre><code>
+				<h3>DOM Nodes: JavaScript Style Naming Conventions</h3>
+				<p class="fragment">Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number.</p>
+				<p class="fragment">To make this style change via JavaScript:</p>
+				<pre class="fragment"><code>
 body {
 background-color: pink;
 padding-top: 10px;
 }
 	</code></pre>
-				<p>Use this JavaScript:</p>
-				<pre><code>
+				<p class="fragment">Use this JavaScript:</p>
+				<pre class="fragment"><code>
 var pageNode = document.getElementsByTagName('body')[0]
 pageNode.style.backgroundColor = 'pink';
 pageNode.style.paddingTop = '10px';
@@ -337,48 +402,58 @@ pageNode.style.paddingTop = '10px';
 			</section>
 			<section>
 	<h3>Let's Develop It</h3>
-					<p>Create a simple HTML page or <a href="files/class4b.zip">use this sample code</a></p>
-					<p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+					<p>Use the previously downloaded <a href="files/class4a.zip">sample code.</a></p>
+					<p>Isolate a node (an element on the page) and change an attribute or add a new style. Also try a style chnage via a button click.</p>
 </section>
 
 			<section>
-				<h3>DOM innerHTML</h3>
-				<p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
-				<p>For example, you can overwrite the entire body:</p>
-				<pre><code>
+				<h3>Changing Text: DOM innerHTML</h3>
+				<p class="fragment">Each DOM node has an <code>innerHTML</code> property with the HTML of all its children.<p>
+			  <p class="fragment">You can use the property to view or change the HTML of a node.</p>
+				<p class="fragment">For example, you can overwrite the entire body:</p>
+				<pre class="fragment"><code>
 var pageNode = document.getElementsByTagName('body')[0];
 pageNode.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt; &lt;p&gt;I just changed the whole page!&lt;/p&gt;'
 	</code></pre>
-				<p>Or just add some new content to the end</p>
-				<pre><code>
+				<p class="fragment">Or just add some new content to the end</p>
+				<pre class="fragment"><code>
 pageNode.innerHTML += '...just adding this bit at the end of the page.';
 	</code></pre>
 			</section>
+
 			<section>
 				<h3>DOM innerHTML continued</h3>
-				<p>You can also target a particular element</p>
-				<p>To fill this HTML element:</p>
-				<pre><code>
+				<p class="fragment">You can also target a particular element</p>
+				<p class="fragment">To fill this HTML element:</p>
+				<pre class="fragment"><code>
 &lt;p id="warning"&gt;&lt;/p&gt;
 	</code></pre>
-				<p>We can select the node and modify it</p>
-				<pre><code>
+				<p class="fragment">We can select the node and modify it</p>
+				<pre class="fragment"><code>
 var warningParagraph = document.getElementById('warning');
 warningParagraph.innerHTML = 'Danger Will Robinson!';
 	</code></pre>
 			</section>
+
+		<section>
+			<h3>Let's Develop It</h3>
+			<p>Use the previously downloaded <a href="files/class4a.zip">sample code.</a></p>
+			<p>Lets spend some time changing and adding text on the screen using innerHTML.</p>
+		</section>
+
 			<section>
-				<h3>Creating New Nodes</h3>
-				<p>The <code>document</code> object also provides ways to create nodes from scratch:</p>
-				<pre><code>
+				<h3>Brand New HTML via JavaScript: Creating New Nodes</h3>
+				<p class="fragment">The <code>document</code> object also provides ways to create nodes from scratch:</p>
+				<pre class="fragment"><code>
 document.createElement(tagName);
 document.createTextNode(text);
 document.appendChild();
 	</code></pre>
 			</section>
+
 			<section>
 				<h3>Creating New Nodes: Sample Code</h3>
-				<pre><code>
+				<pre class="fragment"><code>
 var pageNode = document.getElementsByTagName('body')[0];
 
 var newImg = document.createElement('img');
@@ -392,9 +467,11 @@ newParagraph.appendChild(paragraphText);
 pageNode.appendChild(newParagraph);
 	</code></pre>
 			</section>
-			<section>
+
+	<section>
 	<h3>Let's Develop It</h3>
-					<p>Create a new paragraph element and add it to a div on your page.</p>
+	<p>Use the previously downloaded <a href="files/class4a.zip">sample code.</a></p>
+	<p>Lets spend some time creating brand new HTML using createElement.</p>
 </section>
 
 			<section>
@@ -403,9 +480,108 @@ pageNode.appendChild(newParagraph);
 			</section>
 
 			<section>
+				<h3>JQuery: DOM SELECTIOn</h3>
+			<ul>
+				<li class="fragment">By Id</li>
+				<li class="fragment">By Tag Name</li>
+				<li class="fragment">By Class Name</li>
+			</ul>
+			</section>
+
+			<section>
+				<h3>DOM Access: By Id</h3>
+				<p class="fragment">You can find nodes by id using the method:</p>
+				<pre class="fragment"><code>
+// VANILLA
+document.getElementById(id);
+
+// JQUERY
+$(id);
+	</code></pre>
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
+&lt;img id="bearPic" src="http://placebear.com/200/300" alt="bear"/&gt;
+	</code></pre>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
+// VANILLA
+var imgBear = document.getElementById('bearPic');
+
+// JQUERY
+var imgBear_jquery = $('bearPic');
+
+	</code></pre>
+			</section>
+
+			<section>
+				<h3>DOM Access: By Tag Name</h3>
+				<p class="fragment">You can find list of elements by Tage Name:</p>
+				<pre class="fragment"><code>
+// VANILLA
+document.getElementsByTagName(tagName);
+
+// JQUERY
+$(tagName);
+	</code></pre>
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
+&lt;ol&gt;
+    &lt;li&gt;Daisy&lt;/li&gt;
+    &lt;li&gt;Tulip&lt;/li&gt;
+&lt;/ol&gt;
+	</code></pre>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
+// VANILLA
+var listItems = document.getElementsByTagName('li');
+
+// JQUERY
+var listItems_jquery = $('li');
+	</code></pre>
+			</section>
+
+			<section>
+				<h3>DOM Access: By Class Name</h3>
+				<p class="fragment">You can find a list of elements by class Name:</p>
+				<pre class="fragment"><code>
+// VANILLA
+document.getElementsByClassName(className);
+
+// JQUERY
+$(className);
+	</code></pre>
+				<p class="fragment">To find:</p>
+				<pre class="fragment"><code>
+&lt;h2 class="master-headline"&gt;My Blog Post&lt;/h2&gt;
+	</code></pre>
+				<p class="fragment">We would use:</p>
+				<pre class="fragment"><code>
+// VANILLA
+var headline = document.getElementsByClassName('master-headline');
+
+// JQUERY
+$('master-headline');
+	</code></pre>
+			</section>
+
+			<section>
+				<h3>CSS Changes are a Breeze: </h3>
+				<pre class="fragment"><code>
+$( "div" ).css( "border", "9px solid red" );
+	</code></pre>
+			</section>
+
+			<section>
+				<h3>jQuery</h3>
+        <p>It's handy, has a consistent syntax, and is known for cross browser implementation.</p>
+			</section>
+
+
+
+			<!-- <section>
 				<h3>(OPTIONAL) Let's Develop It: Capstone</h3>
                 <p>Create an application that collects items for a list. The list could be for shopping, music, movies, etc.</p>
-			</section>
+			</section> -->
 
             <!-- <section>
 				<h3>Timing Events</h3>
@@ -488,7 +664,6 @@ targetPic.onclick = function () {
 				<ul>
 					<li class="fragment">Events</li>
 					<li class="fragment">Listeners</li>
-					<li class="fragment">This</li>
 					<li class="fragment">Forms</li>
 					<li class="fragment">DOM</li>
 					<li class="fragment">DOM Methods</li>

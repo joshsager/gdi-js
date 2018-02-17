@@ -1,45 +1,29 @@
-function writeResults (result){
-    //First, find the empty div where we want to put the answers.
-    var resultsDiv = document.getElementById('resultsBox');
+// var radios = document.getElementsByName('tempFormat');
+// var button = document.getElementById('getValue');
+//
+// button.addEventListener("click", handleClick);
+//
+// function handleClick(event){
+//   for (var i = 0, length = radios.length; i < length; i++) {
+//       if (radios[i].checked) {
+//           var radioButtonValue = radios[i].value;
+//           // only one radio can be checked, so stop now
+//           alert(radioButtonValue);
+//           break;
+//       }
+//   }
+// }
 
-    //Second, create a new paragraph
-    var newParagraph = document.createElement('p');
-
-    //Create a text node, a string of text, to put inside the paragraph.
-    var paragraphText = document.createTextNode(result);
-        
-    //Now, we assemble our results. Put the new text in the new paragraph
-    newParagraph.appendChild(paragraphText);
-
-    //Then put it inside the div we found earlier
-    resultsDiv.appendChild(newParagraph);
-}
-
-writeResults('Hi there!');
-
-
-
-var yourName = document.getElementById('name');
 var submitButton = document.getElementById('simpleSubmit');
-var form = document.getElementById('simpleForm');
 
-submitButton.onclick = function(event) {
-    event.preventDefault();
-    
-    var yourNameValue = yourName.value;
+simpleForm.addEventListener("submit", handleSubmit);
 
-    var nameParagraph = document.createElement('p');
-    var nameText = document.createTextNode(yourNameValue);
-    
-    nameParagraph.appendChild(nameText);
-    form.appendChild(nameParagraph);
+function handleSubmit(event){
+  var resultsBox = document.getElementById('resultsBox');
+  var inputValue = document.getElementById('inputValue');
+  event.preventDefault();
 
-    catLadyCheck(yourName);
+
+  resultsBox.innerHTML = inputValue.value;
+
 }
-
-function catLadyCheck(numberOfCats) {
-    if (numberOfCats == 1) {
-        document.write('you are not cat lady');
-    }
-}
-
